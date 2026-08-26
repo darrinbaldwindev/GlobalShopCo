@@ -350,3 +350,21 @@ A future repository-creation request must state all of the following explicitly:
 **Option C:** Keep the repository README-only and defer all documentation publication until Darrin names a source owner/delegate.
 
 **No option is selected by this record.** S-09 is blocked pending Darrin’s explicit selection.
+
+## S-09 Option A outcome — documentation pull request opened; S-10 review gate assigned — 2026-08-26T17:12:43+10:00
+
+**Decision:** Darrin selected **S-09 Option A**: publish the exact validated initial documentation patch set through a new branch and pull request; do not merge or expand scope.
+
+**Executed scope:** Private `GlobalShopCo-Headless` branch [`agent/overseer/initial-documentation`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/tree/agent/overseer/initial-documentation) was created from README-only `main` baseline `646c5df5b51d927255d0b67aa806e5a48fbb6e15`. Commit [`5e32895`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/5e32895b62cebc5a3e851c50f1da9ce4629ac233) contains exactly three authorized paths: `README.md`, `docs/architecture/HEADLESS_STOREFRONT_BOUNDARY.md`, and `docs/overseer/OVERSEER.md` (67 additions, 1 deletion).
+
+**Pull request:** [GlobalShopCo-Headless PR #2 — `docs: establish headless storefront boundaries`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/2) is **OPEN**, non-draft, base `main`, head `agent/overseer/initial-documentation`, at `5e32895`. Its reported merge state is `CLEAN`; this is not evidence of independent validation, implementation readiness, provider connectivity, security, production readiness, or release approval.
+
+**Verification:** The branch changes only the three stated paths; staged whitespace validation passed; no trailing whitespace or credential-like literal was found. No project code, dependency, credential, provider/hosting configuration, Shopify access, product data, checkout action, test, deployment, release, merge, or external integration was performed.
+
+**Status:** **S-09 CLOSED — documentation branch and pull request created within the exact owner-authorized scope.**
+
+### S-10 — documentation pull-request review gate
+
+**Task:** Keep PR #2 documentation-only and reassess only on a material change, review/comment, check outcome, ChatGPT C-01 challenge, or Darrin’s explicit review/merge instruction. Before any owner merge decision, confirm the exact three-file scope, architecture provenance, non-canonical ChatGPT proposal status, secret boundary, absence of implementation claims, and no extra commits. A pull request being `CLEAN` does not authorize merge.
+
+**Prohibited without further authority:** Merge/approve/rebase/close; code or dependency changes; WordPress or Shopify configuration; provider/hosting selection; credentials; product/checkout action; tests; deployment; release; or external integration. **Status:** S-10 active — owner review/merge decision pending.
