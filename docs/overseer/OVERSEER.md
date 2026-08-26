@@ -28,3 +28,13 @@ The canonical Global Shop Co repository or project record was not present in the
 **Confidence:** High for the empty-repository state and owner architecture clarification; unknown for Global Shop Co implementation and all external-commerce capabilities.
 
 > This is a governance timeline, not evidence of Shopify, eBay, website, payment, inventory, or production readiness.
+
+## Active task assignment — Wave 1 (S-01) — 2026-08-26T13:50:47+10:00
+
+**Authority and scope:** Darrin’s continuous-task-chain instruction. This is a read-only source-of-truth discovery task; it does not authorize Shopify/eBay access, credentials, webhooks, listings, synchronization, external-commerce action, or changes outside this log.
+
+**Task S-01:** Record a focused request to identify the canonical Global Shop Co project record and shared-headless channel contract from accessible evidence only.
+
+**Closure evidence:** Accessible-repository evidence; explicit unknowns; dependency map; smallest owner-provided artifact or link required.
+
+**Immediate successor:** On closure and receipt of the canonical record, issue **S-02**: turn the shared-headless contract into a channel-integration evidence checklist.
