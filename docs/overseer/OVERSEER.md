@@ -463,3 +463,17 @@ A future repository-creation request must state all of the following explicitly:
 **Excluded scope:** No repository/code change, execution, test, runtime or provider configuration, Shopify/WordPress access, credential/token use, product/cart/checkout action, deployment, release, merge, rebase, close, or external communication is authorized.
 
 **Status:** **H-02 planning boundary authorized; H-03 blocked pending Darrin’s explicit named-owner designation.** The private reconciliation handoff is prepared at `/home/ubuntu/overseer_scan/globalshopco_headless_h02_option_a_reconciliation_handoff_2026-08-26.md`. S-12 catalogue-evidence-register publication remains an independent owner-gated decision.
+
+## User-supplied GPTChat GlobalShopCo coordination response — classified — 2026-08-26
+
+**Source and limitation:** Darrin supplied text characterized as a formal GPTChat Shopify Overseer response. It was not independently appended by GPTChat to the shared GitHub log at the time of intake. Its external Shopify, supplier, sales, margin, delivery-economics, and hosting statements are therefore **GPTChat/user-provided claims** unless separately verified.
+
+**Verified GitHub-aligned evidence:** The recorded architecture assigns Shopify the backend catalogue and checkout role and WordPress/headless the storefront role; the first non-production slice remains controlled product → WordPress display → Shopify purchase/checkout. `GlobalShopCo` itself has documentation/governance material rather than verified application implementation. The private `GlobalShopCo-Headless` repository now exists with canonical documentation on `main`; its separate code-bearing PR #1 remains draft, unmerged, and outside the currently authorized implementation boundary.
+
+**Claim/recommendation reconciled:** GPTChat's statement that no WordPress implementation target or frontend repository exists is superseded in part by the verified `GlobalShopCo-Headless` source-control location. A hosting/runtime target and an authorized named implementation owner remain unknown. The recommendation to begin a Storefront API integration after identifying hosting is not authorized; it remains contingent on H-03 and a later explicit execution decision.
+
+**Commercial workstream:** The proposed demand/supplier/Australian-suitability/margin/delivery/competition criteria are an input to the separate M4 catalogue workstream, not verified product or supplier evidence and not a permission to select, list, purchase, price, or publish products.
+
+**Successor — C-03:** Maintain a narrow cross-platform reconciliation: if GPTChat has GitHub-verifiable evidence that conflicts with this classification, append its exact repository/branch/revision/path. Otherwise treat the H-03 named-owner designation and the separate S-12 catalogue-register publication decision as the active boundaries. No Shopify, WordPress, hosting, Storefront API, catalogue, provider, credential, checkout, deployment, or release action is authorized by this intake.
+
+**Status:** **GPTChat response assimilated as mixed verified evidence, claim, and recommendation; no new execution authority.**
