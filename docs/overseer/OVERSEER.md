@@ -326,3 +326,27 @@ A future repository-creation request must state all of the following explicitly:
 **Task S-08:** Prepare, but do not commit, an initial documentation patch set for `GlobalShopCo-Headless`. It must contain only: a source-of-truth README/architecture pointer; the non-production first-slice boundary; a redacted configuration/secret rule; provenance references to the approved GlobalShopCo architecture and reconciled M3 planning artifacts; first-slice exclusions; and an owner/delegate placeholder. It must not include code, dependencies, WordPress configuration, Shopify identifiers or credentials, hosting instructions, product details, or implementation claims.
 
 **Next authorization boundary:** A separate owner decision is required before any documentation commit or any other change in `GlobalShopCo-Headless`. **Status:** S-08 active — private workspace drafting only.
+
+## S-08 documentation draft — closed; S-09 owner decision required — 2026-08-26T15:35:05+10:00
+
+**S-08 result:** A private-workspace-only initial documentation patch set is prepared at `/home/ubuntu/overseer_scan/globalshopco_headless_initial_documentation_patchset_2026-08-26.md`. It has not been copied to, committed to, or pushed to `GlobalShopCo-Headless`. The cloned new repository remains clean at initial revision `646c5df5b51d927255d0b67aa806e5a48fbb6e15` with only `README.md`.
+
+| Proposed path | Bounded content |
+|---|---|
+| `README.md` | Canonical relationship, non-production first-slice purpose, source-of-truth pointer, exclusions, and owner/delegate placeholder. |
+| `docs/architecture/HEADLESS_STOREFRONT_BOUNDARY.md` | Non-production first-slice boundary, redacted configuration/secret rule, provenance, and exclusions. |
+| `docs/overseer/OVERSEER.md` | Append-only project evidence/task-log bootstrap; no application or deployment assertion. |
+
+**Validation:** Parent-repository provenance references resolve to the approved architecture commit `47013929f7e1d5d50630796bff0227af717163f9` and the non-canonical ChatGPT proposal commit `3cb489fa6ba4291f68fe4f8897ec732e73f27014`. The draft contains no credential-like literal. It explicitly excludes code, dependencies, WordPress configuration, Shopify identifiers or credentials, hosting instructions, product data, implementation claims, testing, deployment, and release.
+
+**Status:** **S-08 CLOSED — draft prepared and validated without a repository mutation.** C-01 remains requested from ChatGPT Overseer in the shared record: independently challenge the evidence/unknown separation and the no-content boundary without repeating M3 planning or mutating the new repository.
+
+### S-09 — owner-gated documentation publication decision
+
+**Recommended Option A:** Authorize Manus solely to create branch `agent/overseer/initial-documentation` in `GlobalShopCo-Headless`, copy and commit the three exact draft files above, and open a pull request to `main`. The scope would exclude all other paths, code, dependency changes, credentials, provider/hosting selection, Shopify actions, testing, deployment, release, and merge. The PR would require Darrin’s separate review/merge authority.
+
+**Option B:** Authorize only the `README.md` and `docs/architecture/HEADLESS_STOREFRONT_BOUNDARY.md` draft files through the same branch/PR path; defer the project overseer log bootstrap.
+
+**Option C:** Keep the repository README-only and defer all documentation publication until Darrin names a source owner/delegate.
+
+**No option is selected by this record.** S-09 is blocked pending Darrin’s explicit selection.
