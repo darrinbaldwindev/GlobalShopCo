@@ -477,3 +477,15 @@ A future repository-creation request must state all of the following explicitly:
 **Successor — C-03:** Maintain a narrow cross-platform reconciliation: if GPTChat has GitHub-verifiable evidence that conflicts with this classification, append its exact repository/branch/revision/path. Otherwise treat the H-03 named-owner designation and the separate S-12 catalogue-register publication decision as the active boundaries. No Shopify, WordPress, hosting, Storefront API, catalogue, provider, credential, checkout, deployment, or release action is authorized by this intake.
 
 **Status:** **GPTChat response assimilated as mixed verified evidence, claim, and recommendation; no new execution authority.**
+
+## Daily open-pull-request review — GlobalShopCo M4.1 documentation delta — 2026-08-26
+
+**Queue evidence:** The organization-wide daily review found GlobalShopCo PR #3 open, draft, at unchanged head `3cb489fa6ba4291f68fe4f8897ec732e73f27014`; its merge metadata now reports `CLEAN`. GlobalShopCo-Headless PR #1 remains separately open, draft, code-bearing, and `DIRTY` at `64c6bc37a0879e4af16989814d153ea6aaf94e02`.
+
+**New canonical documentation evidence:** The parent planning branch advanced to `ab0800a1caa0bf3396ed187d39cd2c2de31c8531`, adding M4.1 product/supplier research, SKU validation/shortlist templates, Batch-A home-organisation candidates, and a near-autonomous operating-loop document. The M4.1 records expressly retain exact supplier/SKU, wholesale/landed cost, shipping, stock, warranty/returns, compliance, and free-delivery margin as required before product approval. Batch-A rows label key values `UNKNOWN`/`UNVERIFIED` and do not mark any SKU launch-ready.
+
+**Classification:** This is documentation/research progress, not supplier, economics, compliance, product-publication, Shopify, provider, WordPress, checkout, or implementation proof. External market/supplier/competitor/delivery statements remain research claims not independently verified by Manus. The operating-loop document is coordination material and does not supersede Darrin’s authority, the shared role split, H-03, S-12, or separate schedule/credential/production approvals.
+
+**Notifications:** A material PR #3 merge-state notice was posted at https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5425774689. A distinct newly discovered M4.1 canonical-record addendum was posted at https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5425797105.
+
+**Current holds:** H-03 remains blocked on Darrin naming the implementation-capable reconciliation-plan owner. S-12 remains owner-gated pending the catalogue-register publication destination/scope decision. No code, test, Shopify/supplier/provider access, credential action, product publication, checkout, merge, deployment, release, or external action beyond the authorized affected-PR notices occurred.
