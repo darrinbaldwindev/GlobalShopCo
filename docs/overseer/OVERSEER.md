@@ -451,3 +451,15 @@ A future repository-creation request must state all of the following explicitly:
 **Option C:** Close PR #1 without merge and defer the headless implementation path until the source owner, provider/host, and non-production Shopify-access model are decided.
 
 **No option is selected by this record.** H-02 is blocked pending Darrin’s explicit selection. S-12, publication of the private catalogue-evidence register, remains an independent owner-gated decision.
+
+## H-02 Option A selected — reconciliation handoff authorized; named-owner designation pending — 2026-08-26
+
+**Decision:** Darrin selected **H-02 Option A**. GlobalShopCo-Headless PR #1 must remain an unmerged reference only. A future fresh/reconciled candidate from current `main` may be prepared only after Darrin explicitly names an implementation-capable owner. The initial authorized scope is documentation-provenance reconciliation and an exact non-production implementation/validation plan.
+
+**Evidence:** PR #1 is currently open, draft, unmerged, and `DIRTY`; its head is `agent/chatgpt/m3-baseline` at `64c6bc37a0879e4af16989814d153ea6aaf94e02`, based before documented `main` `1df3ecc0c074942317b5cdd133d1d5ab34b09b12`.
+
+**Approved scope after naming:** Establish a fresh candidate’s source relationship to current `main`; map proposed paths to the approved boundary; and prepare a bounded non-production plan covering controlled-product policy, Shopify cart/checkout handoff boundary, configuration/egress/secret model, failure evidence, and a later execution authorization request.
+
+**Excluded scope:** No repository/code change, execution, test, runtime or provider configuration, Shopify/WordPress access, credential/token use, product/cart/checkout action, deployment, release, merge, rebase, close, or external communication is authorized.
+
+**Status:** **H-02 planning boundary authorized; H-03 blocked pending Darrin’s explicit named-owner designation.** The private reconciliation handoff is prepared at `/home/ubuntu/overseer_scan/globalshopco_headless_h02_option_a_reconciliation_handoff_2026-08-26.md`. S-12 catalogue-evidence-register publication remains an independent owner-gated decision.
