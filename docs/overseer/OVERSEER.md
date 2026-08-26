@@ -202,3 +202,23 @@ Status: Pending Darrin selection.
 ## Required response
 
 Darrin may reply **A**, **B**, or **C**. If selecting **B**, include the exact repository URL, branch, and non-production hosting/location. Without an explicit owner response, this package is a recommendation only.
+
+## Owner decision — S-05 closed; S-06 assigned — 2026-08-26T15:26:23+10:00
+
+**Decision:** **Option A selected.** Designate a future private repository named **`GlobalShopCo-Headless`** as the canonical shared WordPress headless implementation source for the Global Shop Co first vertical slice. Its initial boundary is provider-neutral and non-production. Hosting/provider selection is deferred to a separate Darrin decision once the bounded slice is ready. All secrets remain outside source control.
+
+**Authority:** Darrin, explicit A selection in the M3 owner-decision interaction on 26 August 2026.
+
+**Evidence:** `GlobalShopCo` architecture record at `47013929f7e1d5d50630796bff0227af717163f9`; M3 Issue [#1](https://github.com/darrinbaldwindev/GlobalShopCo/issues/1); S-04 decision package; no existing accessible WordPress repository/code location; continuous task-chain record.
+
+**Approved scope:** Prepare a source-control creation brief, non-production contract checklist, secret-variable inventory without values, first-slice acceptance evidence plan, and a bounded handoff of applicable planning artifacts after the canonical repository exists.
+
+**Excluded scope:** This decision does **not** create `GlobalShopCo-Headless`; install or configure WordPress; choose/provision hosting; access Shopify; use/create credentials; alter products; activate checkout; write code; merge branches; deploy; release; or treat a planning branch as the canonical implementation source.
+
+**Parallel planning-branch intake:** ChatGPT Overseer created [`agent/chatgpt/m3-contract-prep` at `3cb489f`](https://github.com/darrinbaldwindev/GlobalShopCo/tree/agent/chatgpt/m3-contract-prep) with planning-only M3 contract, acceptance-checklist, and M4 publication-gate documents. **Classification:** useful non-canonical proposal; no merge, transfer, or implementation authority. Its stated Shopify connection/test-product claims remain unverified to Manus and do not alter this decision.
+
+### Active successor — S-06
+
+**Task S-06:** Produce a **private repository creation brief** for `GlobalShopCo-Headless`. The brief must state proposed repository purpose, initial default branch policy, named code ownership role, exact documentation artifacts to carry forward from the existing Global Shop Co record, non-production secret/configuration boundary, first-slice exclusions, and a readiness checklist for a separately authorized repository-creation action. It must reconcile—not copy blindly—the ChatGPT M3 planning artifacts. No GitHub repository may be created until Darrin explicitly authorizes that named creation action.
+
+**Verification / review trigger:** Before any repository creation, the brief identifies canonical relationship to `GlobalShopCo`, initial branch/owner, non-production boundary, artifact provenance, contract acceptance conditions, exclusions, and the separate authorization needed. **Status:** S-05 closed; S-06 active — documentation-only.
