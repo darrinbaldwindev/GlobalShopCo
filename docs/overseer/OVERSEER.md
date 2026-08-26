@@ -222,3 +222,81 @@ Darrin may reply **A**, **B**, or **C**. If selecting **B**, include the exact r
 **Task S-06:** Produce a **private repository creation brief** for `GlobalShopCo-Headless`. The brief must state proposed repository purpose, initial default branch policy, named code ownership role, exact documentation artifacts to carry forward from the existing Global Shop Co record, non-production secret/configuration boundary, first-slice exclusions, and a readiness checklist for a separately authorized repository-creation action. It must reconcile—not copy blindly—the ChatGPT M3 planning artifacts. No GitHub repository may be created until Darrin explicitly authorizes that named creation action.
 
 **Verification / review trigger:** Before any repository creation, the brief identifies canonical relationship to `GlobalShopCo`, initial branch/owner, non-production boundary, artifact provenance, contract acceptance conditions, exclusions, and the separate authorization needed. **Status:** S-05 closed; S-06 active — documentation-only.
+# GlobalShopCo-Headless — Private Repository Creation Brief
+
+**Prepared:** 2026-08-26T15:26:23+10:00 (`Australia/Sydney`)
+**Prepared by:** Manus Overseer, documentation-only planning
+**Decision basis:** Darrin selected Option A for the M3 source-control baseline.
+**Status:** Ready for separate repository-creation authorization; no repository has been created.
+
+## 1. Purpose and canonical relationship
+
+| Item | Proposed record |
+|---|---|
+| Repository name | `darrinbaldwindev/GlobalShopCo-Headless` |
+| Visibility | **Private** |
+| Canonical role | The shared WordPress headless storefront implementation source for the Global Shop Co first non-production vertical slice. |
+| Parent architecture record | `darrinbaldwindev/GlobalShopCo`, architecture artifact `docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md` at `47013929f7e1d5d50630796bff0227af717163f9`. |
+| Commerce authority | Shopify remains the documented commerce/catalogue/checkout source; the new repository must not become a product, price, inventory, cart, checkout, or order system of record. |
+| Initial scope | One controlled non-production product → Shopify Storefront API retrieval → WordPress display → approved Shopify cart/checkout handoff. |
+| Explicit exclusions | Production deployment, provider/hosting selection, payment handling, customer accounts, eBay/marketplace work, automation, analytics, bulk catalogue work, multi-tenancy, full catalogue migration, and product publication changes. |
+
+## 2. Proposed governance and branch baseline
+
+The creation request should name **Darrin or an explicitly delegated source owner** before creation. The proposed initial default branch is `main`; this is a creation-request parameter, not an instruction to create or protect a branch now. Branch-protection, CI, deployment, hosting, contributors, and secrets are not in scope for this brief.
+
+The repository must contain a concise README or architecture pointer that states: GlobalShopCo is the parent architecture record; Shopify is the commerce authority; this repository owns only the headless presentation/integration implementation; and no production capability is implied.
+
+## 3. Artifact provenance and reconciliation
+
+| Artifact | Provenance | Proposed treatment after authorized creation |
+|---|---|---|
+| Working vertical-slice architecture | `GlobalShopCo` commit `4701392…`, `docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md` | Carry forward by reference or reconciled copy, preserving the source commit/link. |
+| M3 minimum Shopify–WordPress contract | ChatGPT planning proposal, `agent/chatgpt/m3-contract-prep` at `3cb489f…`, `docs/architecture/M3_SHOPIFY_WORDPRESS_MINIMUM_CONTRACT.md` | Reconcile against the approved architecture before any inclusion. Do not blindly merge or copy it. |
+| M3 acceptance checklist | Same non-canonical proposal, `docs/architecture/M3_ACCEPTANCE_CHECKLIST.md` | Use as a candidate acceptance checklist only after reconciliation and attribution. |
+| M4 product-publication gate | Same non-canonical proposal, `docs/catalogue/M4_PRODUCT_PUBLICATION_GATE.md` | Keep outside the initial headless repository unless a later owner decision assigns catalogue documentation there. M4 must not block M3. |
+
+The ChatGPT branch is a **planning proposal**, not a canonical source and not authorization to merge, transfer, create source files, or act on external Shopify claims. Any external Shopify/test-product statement remains separately evidenced by its originating Overseer unless independently verified through a separately authorized review.
+
+## 4. Non-production configuration and secret boundary
+
+The first implementation brief may name configuration categories only. It must not include values, keys, tokens, store identifiers, customer data, product data beyond approved test fixtures, or provider credentials in Git.
+
+| Configuration category | Permitted in source control | Prohibited in source control |
+|---|---|---|
+| WordPress environment mode | Non-production indicator and documentation | Host URL if sensitive; production settings |
+| Shopify endpoint/version | Variable name and documented expected API shape | Access token, private app secret, customer token, or credential value |
+| Test product fixture | Test identifier/handle only after separate evidence approval | Live customer/order/payment data |
+| Checkout handoff | Documented path/interface and failure behavior | Payment processing logic or checkout credentials |
+| Observability | Redacted event schema and no-sensitive-data policy | Raw credentials, customer data, or telemetry collector without approval |
+
+## 5. Minimum M3 contract and evidence checklist
+
+Before any implementation is considered, the owner/delegate must produce a source-controlled, non-production evidence plan that covers:
+
+1. A controlled test-product identifier and expected title, description, image, price/currency, variant/SKU, and availability fields.
+2. A documented product-not-found, unavailable, missing-field, API-timeout, and checkout-handoff failure behavior.
+3. A boundary in which WordPress displays Shopify-originated product data and does not implement payment, duplicate order logic, or become the commerce source of truth.
+4. A non-production, redacted configuration method outside source control.
+5. A reproducible evidence path for product retrieval, display, permitted checkout handoff, and no-secret review.
+6. Confirmation that no marketplace/eBay, customer-account, analytics, automation, bulk-catalogue, or production-release scope is introduced.
+
+## 6. Required separate authorization before creation
+
+A future repository-creation request must state all of the following explicitly:
+
+| Required field | Required value / evidence |
+|---|---|
+| Destination | `darrinbaldwindev` GitHub organization/account and private visibility |
+| Repository name | `GlobalShopCo-Headless` |
+| Initial default branch | Exact branch name, proposed `main` |
+| Named source owner | Darrin or an explicitly delegated implementation owner |
+| Initial contents | Exact files/architecture pointers permitted at creation; no blind branch import |
+| Credential boundary | No credentials or provider connection in the creation action |
+| External actions | None: no hosting, WordPress install, Shopify access, checkout, product change, deployment, or release |
+| Verification | Repository is private, contains only authorized initial documentation, has no secrets, has the recorded architecture pointer, and has no unintended branches/automation |
+| Reversibility | Empty private repository can be deleted or its initial documentation reverted before implementation begins |
+
+## 7. Result
+
+**S-06 completion criterion:** This brief gives a future authorized creator a complete, bounded request. It is **not** permission for any actor to create the repository. The next task after an explicit creation authorization would be a source-control creation verification task, limited to the exact authorized repository/visibility/default branch/initial documentation scope.
