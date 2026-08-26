@@ -70,3 +70,54 @@ The canonical Global Shop Co repository or project record was not present in the
 **Task S-03:** Upon receipt of the owner-provided architecture artifact/pointer, reconcile it against the complete channel-integration checklist and record evidenced, unknown, and owner-gated categories. If no artifact is supplied, preserve this block and avoid repetitive rediscovery scans.
 
 **Status:** S-02 closed as blocked; S-03 active and blocked on the canonical contract artifact.
+
+## GPTChat Shopify Overseer — independent assessment update — 2026-08-26
+
+**Purpose:** Shared handoff to the independent Manus Overseer. This entry records GPTChat-side findings only; it does not request or rely upon Manus conclusions.
+
+### Verified repository findings
+
+- `darrinbaldwindev/GlobalShopCo` is the canonical repository currently being used for the GlobalShopCo project.
+- Default branch reviewed: `agent/overseer/initial-project-timeline`.
+- Repository tree currently contains documentation/governance only; no application source, WordPress frontend, Shopify integration implementation, tests, CI/CD, or deployment configuration was found.
+- `docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md` establishes the approved target: Shopify as commerce backend/source of truth, WordPress as headless frontend, and Shopify checkout for the transaction flow.
+- The first technical vertical slice is bounded to Shopify product -> WordPress retrieval/display -> customer purchase initiation -> Shopify checkout. Advanced features are explicitly out of scope for the first slice.
+- GitHub Issue #1 remains the implementation-baseline task for establishing the WordPress/headless implementation location.
+- GPTChat created GitHub Issue #2, `M4 — Build curated master catalogue and vertical merchandising model`, to capture the commercial catalogue requirement without allowing catalogue expansion to block the first technical slice.
+
+### Shopify-side verified progress
+
+- Shopify connection is active for the project.
+- A controlled draft product, `GlobalShopCo Vertical Slice Test Product`, SKU `GSCO-TEST-001`, price `$1.00`, was created specifically for integration testing and marked not-for-sale. It has not been published.
+- The intended commerce model is now explicitly confirmed by Darrin: Shopify is the master source for products, variants, pricing, inventory, cart, checkout and orders; headless WordPress sites consume Shopify commerce data and use Shopify checkout.
+- Specialist WordPress sites such as Baby, Pet and Safety are intended to be niche storefronts/merchandising layers over the Shopify master catalogue, not independent product databases.
+
+### Commercial/product requirements now confirmed by owner
+
+The master catalogue should prioritise products from the most popular categories, but selection must favour **top-selling/proven products from reliable suppliers** rather than filling collections indiscriminately. Products must be assessed for Australian suitability, supplier reliability, competitive pricing/margin, and the ability to support the GlobalShopCo **free-delivery** proposition. Niche product groupings such as Baby/Pet/Safety are intended to become specialist WordPress storefronts powered by subsets of the Shopify master catalogue.
+
+### Current technical critical path
+
+1. Establish/provision the WordPress/headless implementation target and source-control location.
+2. Implement the minimum Shopify Storefront API integration against the controlled Shopify test product.
+3. Demonstrate the first end-to-end slice: Shopify product -> headless product page -> Shopify cart/checkout.
+
+Catalogue development can proceed in parallel, but must not block the technical vertical slice.
+
+### Current blockers / owner-gated items
+
+**Confirmed blocker:** No WordPress implementation/hosting target is currently available through the connected GitHub/Shopify tooling.
+
+**Likely blocker:** Storefront API integration credentials/configuration and deployment environment will need to be established when the headless target is provisioned.
+
+**Unresolved owner-level requirement:** The WordPress hosting/deployment target and preferred source-control location have not yet been provided.
+
+**No production implementation was changed in this assessment.** The only Shopify change was creation of the controlled draft test product described above.
+
+### Recommendation to Manus Overseer
+
+Treat the Shopify/headless architecture document and the current Shopify source-of-truth clarification as the latest project evidence. Do not continue the former eBay-centric interpretation of the GlobalShopCo project. Independently verify these findings, then focus implementation planning on the WordPress target and first Shopify-to-headless-to-checkout vertical slice while allowing curated catalogue research to proceed in parallel.
+
+**Confidence:** High on repository state and owner-stated architecture; medium on external WordPress hosting readiness because no hosting target is currently connected/evidenced.
+
+**Next reassessment trigger:** WordPress target becomes available, a new implementation repository/source is established, or Darrin changes the Shopify/headless architecture or catalogue strategy.
