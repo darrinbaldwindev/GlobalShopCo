@@ -145,3 +145,60 @@ Treat the Shopify/headless architecture document and the current Shopify source-
 **Task S-04:** Prepare the **M3 headless baseline readiness package** from Issue #1 and the recorded vertical-slice architecture. It must identify the exact owner decision needed for the WordPress implementation/hosting and source-control location, list the minimum non-production Shopify-to-WordPress contract evidence, and preserve the first-slice exclusions. It must not create WordPress/Shopify code, access external accounts, request or use credentials, provision hosting, alter products, or activate checkout.
 
 **Status:** S-03 closed; S-04 active and blocked on the authoritative WordPress implementation/hosting location plus a non-production integration evidence package.
+# Global Shop Co S-04 — M3 Headless Baseline Decision Package
+
+**Prepared:** 2026-08-26T14:44:11+10:00 (`Australia/Sydney`)
+**Prepared by:** Manus Overseer, read-only governance role
+**Decision authority:** Darrin
+**Decision status:** Pending
+
+## Decision requested
+
+> **Where should the canonical WordPress headless implementation live for the approved non-production Shopify → WordPress → Shopify-checkout vertical slice, and what is the approved initial non-production boundary?**
+
+This is a **source-control and non-production baseline** decision. It does not authorize creation of a repository, WordPress installation, hosting provisioning, Shopify API use, credential access, product change, checkout activation, code implementation, deployment, or release.
+
+## Current verified GitHub evidence
+
+| Evidence | Exact record | Meaning |
+|---|---|---|
+| Working architecture | [`SHOPIFY_HEADLESS_VERTICAL_SLICE.md`](https://github.com/darrinbaldwindev/GlobalShopCo/blob/47013929f7e1d5d50630796bff0227af717163f9/docs/architecture/SHOPIFY_HEADLESS_VERTICAL_SLICE.md) at `47013929f7e1d5d50630796bff0227af717163f9`. | The recorded working design is Shopify commerce backend/catalogue/checkout; WordPress headless customer frontend; first slice is test product → retrieval/display → purchase action → Shopify checkout. |
+| M3 baseline work | [Issue #1](https://github.com/darrinbaldwindev/GlobalShopCo/issues/1). | Requires the authoritative WordPress implementation location, minimum data contract, non-production credential/configuration approach, and a controlled test-product integration target. |
+| M4 catalogue work | [Issue #2](https://github.com/darrinbaldwindev/GlobalShopCo/issues/2). | Explicitly parallel; must not block M3 vertical slice. |
+| Existing accessible source locations | The accessible GitHub portfolio contains no WordPress repository, `wordpress` code result, or `wp-content` code result. Global Shop Co remains documentation/governance-only at `c467606ddbe8b762216942b46ce0c28d862f7752` before this package. | No authoritative WordPress source-control location is evidenced. |
+| External Shopify state | The GPTChat Overseer handoff asserts an active connection and controlled draft test product. | **Claim only to Manus.** No external Shopify access was performed or independently verified here. |
+
+## Minimum evidence boundary after a location is selected
+
+| Area | Required non-production evidence | Excluded from this decision |
+|---|---|---|
+| Source control | Canonical repository URL, default branch, named responsible owner, and no secret/config commit. | Repository creation or code changes. |
+| Product read | A minimum documented contract for one controlled test product: identifier/handle, title, description, image, price/currency, availability state, and error/empty state. | Broad catalogue sync, bulk import, marketplace/eBay, or analytics. |
+| Checkout handoff | A defined safe handoff from WordPress product page to the documented Shopify purchase/checkout flow. | Live payment, production checkout, customer accounts, or order fulfilment changes. |
+| Credentials/config | Non-production secret-storage approach outside source control; named configuration variables only, with no values. | Credential disclosure, connector change, or account access. |
+| Validation | A reproducible non-production demonstration path and evidence record. | Hosting release, production deployment, or launch claim. |
+
+## Alternatives
+
+| Option | Decision | Benefits | Constraints |
+|---|---|---|---|
+| **A — Recommended** | **Authorize a new private `GlobalShopCo-Headless` repository as the canonical shared WordPress headless source. Begin with a provider-neutral local/non-production baseline; defer hosting/provider selection until the documented first slice is ready for a separate owner decision. Keep non-production secrets outside source control.** | Establishes one reusable frontend source for Global Shop Co vertical storefronts; permits M3 contract planning without premature provider lock-in; keeps first slice tightly scoped and reversible. | Requires a later explicit repository-creation authorization and a separate host/deployment decision. No implementation begins from this decision alone. |
+| B | Name an existing private repository and non-production WordPress hosting target supplied by Darrin as the canonical location. | Uses an already chosen environment if one exists. | The exact repo/branch/host/source owner must be provided; no existing accessible evidence identifies one. |
+| C | Keep the architecture document only and pause M3 until a hosting/provider and source location are chosen together. | Avoids setting any implementation baseline before infrastructure choice. | Delays the first vertical slice and preserves the current missing-location blocker. |
+
+## Recommended decision record
+
+```markdown
+Decision: Select Option A — designate a new private GlobalShopCo-Headless repository as the canonical shared WordPress headless source; use a provider-neutral local/non-production baseline first; defer host/provider selection to a separate owner decision after the bounded slice is ready; keep all secrets outside source control.
+Authority: Darrin.
+Evidence: GlobalShopCo architecture document `4701392…`; Issues #1 and #2; no existing accessible WordPress source location.
+Approved scope: Prepare a source-control creation brief, non-production contract checklist, secret-handling variable list without values, and first-slice acceptance evidence plan.
+Excluded scope: No repository creation, WordPress installation, hosting provisioning, Shopify access, credential use, product change, checkout activation, code, deployment, release, analytics, marketplace/eBay, or catalogue expansion.
+Verification: Before any implementation task, record the exact canonical repo/branch, named owner, non-production boundary, minimum contract fields, exclusion list, and evidence plan.
+Review trigger: Repository/location selected, provider/hosting decision proposed, or a change to the documented working architecture.
+Status: Pending Darrin selection.
+```
+
+## Required response
+
+Darrin may reply **A**, **B**, or **C**. If selecting **B**, include the exact repository URL, branch, and non-production hosting/location. Without an explicit owner response, this package is a recommendation only.
