@@ -384,3 +384,21 @@ A future repository-creation request must state all of the following explicitly:
 **Governance effect:** The catalogue documents do not conflict with the approved non-production headless slice if treated as planning evidence. They do not supersede the M3 boundary, make the ChatGPT planning branch canonical, or authorize M4 catalogue execution. Their priority categories include potentially higher compliance/returns/safety exposure (for example, health/beauty, consumer electronics, kids/baby, and safety-adjacent product concepts); the stated guardrails are necessary but do not independently demonstrate a compliance review.
 
 **Task-chain update:** **S-11 assigned — catalogue-evidence register specification (private drafting only).** Prepare a compact, provider-neutral evidence-register template and review checklist for future catalogue research. It must not create products, contact suppliers, use Shopify, make commercial claims, set prices, activate free delivery, publish listings, or modify any repository. It remains subordinate to S-10: PR #2 is still open and requires a separate Darrin review/merge decision.
+
+## S-11 catalogue-evidence register draft — closed; S-12 publication decision required — 2026-08-26T17:15:10+10:00
+
+**S-11 result:** A private, provider-neutral catalogue-evidence register specification and review checklist is prepared at `/home/ubuntu/overseer_scan/globalshopco_catalogue_evidence_register_specification_draft_2026-08-26.md`. It defines lifecycle meanings, evidence provenance, supplier/delivery/economics/compliance/returns/technical/decision fields, a review checklist, confidential-source handling, and explicit exclusions. It was not copied to, committed to, or pushed to any repository.
+
+**Validation:** The draft requires dated, attributable evidence and preserves `unknown` as an explicit blocker; it distinguishes supplier/platform/research claims from verified facts; it prohibits credential-like values and source-control storage of secrets/private portal data; and it contains no credential-like literal. The GlobalShopCo parent and GlobalShopCo-Headless worktrees remained clean after drafting. No supplier, Shopify, market-research, product, pricing, delivery, checkout, test, deployment, release, or external communication action occurred.
+
+**Status:** **S-11 CLOSED — private documentation artifact prepared and validated.**
+
+### S-12 — owner-gated register-publication decision
+
+**Recommended Option A:** Authorize a **documentation-only follow-up commit and pull request** in `GlobalShopCo-Headless`, based on the eventual merge state of PR #2, that adds the exact reviewed register specification under `docs/catalogue/` and appends only a corresponding evidence/task entry to that repository’s `docs/overseer/OVERSEER.md`. It would exclude all product data, supplier contacts, prices, credentials, Shopify/WordPress/provider configuration, implementation, test, deployment, release, and merge.
+
+**Option B:** Authorize the specification only in parent `GlobalShopCo` as a documentation-only change; do not add it to the headless source repository.
+
+**Option C:** Retain the specification as a private reference and defer all repository publication until Darrin names a catalogue/source owner and decides the canonical documentation destination.
+
+**No option is selected by this record.** S-12 is blocked pending Darrin’s explicit selection. S-10 remains independently active: GlobalShopCo-Headless PR #2 is open and requires a separate review/merge decision.
