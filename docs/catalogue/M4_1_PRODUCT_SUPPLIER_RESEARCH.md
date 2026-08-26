@@ -1,13 +1,13 @@
 # M4.1 — Product & Supplier Research
 
 **Date:** 2026-08-26
-**Status:** Initial evidence pass — not launch approval
+**Status:** Product-level validation next — research is not launch approval
 
 ## Market evidence
 
-Australia Post's 2026 eCommerce Report states Australians spent $82.6B online in 2025, up 14% YoY. Average online basket size fell to $96, reinforcing the need for value, cross-sell and delivery economics. Home & Garden recorded $11.4B, Consumer Electronics $9.2B, Fashion & Apparel $11.6B, Hobbies & Recreation $5.0B and Health & Beauty $3.8B. Pet Products reached $1.4B. Books/Stationery/Multimedia had the fastest growth among the listed categories at +24.1%. 
+Australia Post's 2026 eCommerce Report states Australians spent $82.6B online in 2025, up 14% YoY. Average online basket size fell to $96, reinforcing the need for value, cross-sell and delivery economics. Home & Garden recorded $11.4B, Consumer Electronics $9.2B, Fashion & Apparel $11.6B, Hobbies & Recreation $5.0B and Health & Beauty $3.8B. Pet Products reached $1.4B. Books/Stationery/Multimedia had the fastest growth among the listed categories at +24.1%.
 
-Source: Australia Post 2026 eCommerce Report: https://auspost.com.au/business/ecommerce/ecommerce-report
+Source: Australia Post 2026 eCommerce Report.
 
 ## Supplier/platform evidence
 
@@ -17,11 +17,7 @@ Evidence reviewed indicates Dropshipzone supports Australian dropshipping across
 
 This makes Dropshipzone a strong **candidate sourcing platform**, but individual products/suppliers still require product-level validation of cost, postage, warranty, stock and delivery performance before launch.
 
-Source: https://www.dropshipzone.com.au/
-
 ### Home & Garden
-
-Dropshipzone exposes a broad Home & Garden range including storage, kitchenware, bathroom accessories, laundry/cleaning, lighting, garden tools and other practical household products. The supplier platform states its Home & Garden suppliers are pre-vetted and support fast shipping.
 
 Initial candidate product types:
 - storage/organisation products
@@ -33,11 +29,7 @@ Initial candidate product types:
 
 Avoid large/heavy products initially because free-delivery economics and damage risk are less favourable.
 
-Source: https://www.dropshipzone.com.au/categories/home-garden
-
 ### Electronics
-
-Dropshipzone's electronics range includes computer accessories, mobile accessories, chargers/power, networking, gadgets, headphones and other categories. Its electronics guidance specifically highlights phone accessories, portable speakers, smart-home devices, power banks and computer accessories as popular product types, while noting that electronics can carry higher shipping, return and obsolescence risks.
 
 Initial candidate product types:
 - phone cases/screen protectors
@@ -49,11 +41,7 @@ Initial candidate product types:
 
 Prefer low-value, lightweight accessories over high-ticket electronics for the initial free-delivery model.
 
-Sources: https://www.dropshipzone.com.au/categories/electronics ; https://www.dropshipzone.com.au/categories/electronics/computer-accessories
-
 ### Health & Beauty
-
-Dropshipzone provides personal-care categories including bath/body, cosmetic storage, hair care, skincare, oral care, shaving/hair removal and massage/relaxation.
 
 Initial candidate product types:
 - cosmetic storage/organisers
@@ -64,17 +52,11 @@ Initial candidate product types:
 
 Avoid medicines, supplements and products making therapeutic claims until Australian regulatory requirements and supplier documentation are separately verified.
 
-Sources: https://www.dropshipzone.com.au/categories/health-beauty ; https://www.dropshipzone.com.au/categories/health-beauty/personal-care
-
 ### Pet
 
 Pet is commercially attractive: Australia Post reports $1.4B of online pet-product spend in 2025 and highlights delivery-date clarity as a contributor to category performance.
 
-Supplier evidence:
-- Prestige Pet Products is an Australian family-owned wholesale distributor based north of Brisbane and supplies retail stores/vets Australia-wide, with dog, cat, bird and small-animal ranges.
-- Elite Pet Products states it supplies more than 3,000 pet-product lines nationally to approved trade customers, with categories spanning dogs, cats, birds and other animals.
-- VetSupply Max explicitly advertises dropshipping and Australia-based supply across pet accessories, grooming and other pet-care categories.
-- PetHug advertises wholesale and dropshipping, with pet accessories and smart pet products.
+Supplier evidence includes Australian wholesale/distribution candidates and specialist dropship candidates. FurMate explicitly advertises dropshipping, no minimum order quantities and free local delivery or low-cost shipping for its dog accessories. Elite Pet Products reports more than 3,000 pet-product lines and national distribution to approved trade customers, but freight charges apply. Wholesale Pet Supplies is an Australian-owned South-East Queensland wholesaler with nationwide distribution but is not evidenced as a dropship provider. These are supplier candidates, not automatic approvals.
 
 Initial candidate product types:
 - grooming accessories
@@ -86,8 +68,6 @@ Initial candidate product types:
 - small-animal/bird accessories
 
 Avoid pet medications, pesticides/parasiticides, food and other regulated/perishable products in the first catalogue unless separately validated.
-
-Sources: https://auspost.com.au/business/ecommerce/ecommerce-report ; https://www.prestigepetproducts.com.au/ ; https://elitepet.com.au/ ; https://www.vetsupplymax.com.au/ ; https://www.pethug.com.au/
 
 ## Initial ranking
 
@@ -103,7 +83,7 @@ Sources: https://auspost.com.au/business/ecommerce/ecommerce-report ; https://ww
 | Large electronics | Strong demand but warranty/return/shipping risk | Supplier availability | Poorer initial fit | **Deprioritise initially** |
 | Large furniture/garden products | Strong category | Supplier availability | Poor free-delivery fit | **Deprioritise initially** |
 
-## Important conclusion
+## Key conclusion
 
 The strongest first catalogue strategy is **not simply the biggest categories**. The first SKU set should favour compact, non-regulated, practical products with repeat/cross-sell potential and enough margin to absorb the GlobalShopCo free-delivery proposition.
 
