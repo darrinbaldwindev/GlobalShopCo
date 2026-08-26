@@ -300,3 +300,29 @@ A future repository-creation request must state all of the following explicitly:
 ## 7. Result
 
 **S-06 completion criterion:** This brief gives a future authorized creator a complete, bounded request. It is **not** permission for any actor to create the repository. The next task after an explicit creation authorization would be a source-control creation verification task, limited to the exact authorized repository/visibility/default branch/initial documentation scope.
+
+## Authorized repository creation — S-07 closed; S-08 assigned — 2026-08-26T15:35:05+10:00
+
+**Decision executed:** Darrin’s selected Option A authorized creation of private [`darrinbaldwindev/GlobalShopCo-Headless`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless).
+
+**Verified creation evidence:**
+
+| Verification item | Result |
+|---|---|
+| Repository identity | `darrinbaldwindev/GlobalShopCo-Headless` |
+| Visibility | **Private** |
+| Default branch | `main` |
+| Initial tree | `README.md` only at `646c5df5b51d927255d0b67aa806e5a48fbb6e15` |
+| Remote branches | One remote head: `main` |
+| Description | Empty |
+| Workflow/source scope | No workflow, application, configuration, architecture, integration, or deployment file is present in the initial tree. |
+
+**Scope confirmation:** No WordPress installation, Shopify access, credential use, product change, checkout activation, hosting/provider selection, code, branch import, merge, deployment, release, or external automation was performed. GitHub hook inspection is unavailable to the current integration and is therefore **unknown**, not inferred; the README-only tree confirms no repository-resident workflow file.
+
+**Status:** **S-07 CLOSED — authorized private source-control location created within scope.** The repository is the designated future headless implementation location, but its creation is not evidence of implementation, provider readiness, external connectivity, test success, or production readiness.
+
+### Active successor — S-08
+
+**Task S-08:** Prepare, but do not commit, an initial documentation patch set for `GlobalShopCo-Headless`. It must contain only: a source-of-truth README/architecture pointer; the non-production first-slice boundary; a redacted configuration/secret rule; provenance references to the approved GlobalShopCo architecture and reconciled M3 planning artifacts; first-slice exclusions; and an owner/delegate placeholder. It must not include code, dependencies, WordPress configuration, Shopify identifiers or credentials, hosting instructions, product details, or implementation claims.
+
+**Next authorization boundary:** A separate owner decision is required before any documentation commit or any other change in `GlobalShopCo-Headless`. **Status:** S-08 active — private workspace drafting only.
