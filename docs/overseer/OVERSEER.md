@@ -38,3 +38,21 @@ The canonical Global Shop Co repository or project record was not present in the
 **Closure evidence:** Accessible-repository evidence; explicit unknowns; dependency map; smallest owner-provided artifact or link required.
 
 **Immediate successor:** On closure and receipt of the canonical record, issue **S-02**: turn the shared-headless contract into a channel-integration evidence checklist.
+
+## Task-chain update — S-01 closed; S-02 activated — 2026-08-26T13:54:11+10:00
+
+**Task S-01 result:** **CLOSED — source-of-truth pointer identified.** The Git transport for the prior `Shopify-to-eBay` remote reported that the repository moved to [`darrinbaldwindev/GlobalShopCo`](https://github.com/darrinbaldwindev/GlobalShopCo). A direct GitHub metadata review confirms `GlobalShopCo` is public, was created on 23 August 2026, and currently names `agent/overseer/initial-project-timeline` as its default branch at [`64113c2`](https://github.com/darrinbaldwindev/GlobalShopCo/commit/64113c2cec7510c988d7d9007ec5b5a6d6dbb7ae).
+
+**Verified facts:** The current Global Shop Co default tree has three tracked entries, all associated with the existing documentation/log lineage; it has no open PRs or issues. The latest default-branch commit adds the Wave 1 log task only. This is evidence that `GlobalShopCo` is the current repository identity for the former Shopify-to-eBay workstream, **not** evidence of a shared-headless implementation or a channel contract.
+
+**Unknowns and blocker:** No product source, architecture contract, API/schema, catalogue/order/inventory ownership, Shopify/eBay boundary, website topology, sandbox plan, or acceptance criteria is present in the accessible repository evidence. The owner-directed Global Shop Co/shared-headless relationship remains a statement of intended architecture until its canonical contract is recorded.
+
+### Active successor — S-02
+
+**Task S-02:** Build a shared-headless channel-integration evidence checklist from the canonical `GlobalShopCo` record. First identify whether a contract or pointer appears in a material revision; otherwise create one precise Darrin decision request naming the smallest required source-of-truth artifact. The expected categories are storefront/website boundary, catalogue and price source, inventory authority, order/listing ownership, identity/tenant boundary, webhook/reconciliation model, error handling, sandbox validation, and release gate.
+
+**Permitted scope:** Read-only repository/log evidence and append-only task records. **Prohibited scope:** Implementing code, Shopify/eBay account or credential access, webhooks, listings, synchronization, deployment, releases, or changes outside this log.
+
+**Closure evidence for S-02:** Exact current Global Shop Co ref; contract/pointer evidence or explicit absence; checklist with each category marked evidenced/unknown; one owner decision needed; and successor task or blocked state.
+
+**Next review trigger:** A new Global Shop Co source/issue/PR/contract record, a Darrin architecture decision, or completion of S-02. **Status:** ACTIVE — BLOCKED ON CANONICAL CONTRACT EVIDENCE.
