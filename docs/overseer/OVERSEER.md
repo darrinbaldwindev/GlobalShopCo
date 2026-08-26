@@ -402,3 +402,25 @@ A future repository-creation request must state all of the following explicitly:
 **Option C:** Retain the specification as a private reference and defer all repository publication until Darrin names a catalogue/source owner and decides the canonical documentation destination.
 
 **No option is selected by this record.** S-12 is blocked pending Darrin’s explicit selection. S-10 remains independently active: GlobalShopCo-Headless PR #2 is open and requires a separate review/merge decision.
+
+## Fresh portfolio scan; S-10 Option A merge completed; separate PR #1 finding — 2026-08-26T17:20:13+10:00
+
+**Scan scope:** Fresh static GitHub metadata/open-pull-request inventory across AgentOS, Franchise, Overseer, GemVerse (`manus`), GlobalShopCo, GlobalShopCo-Headless, Amazon-Affiliate, and shared `repo`; no project code, test, build, provider, credential, deployment, release, supplier, Shopify, checkout, or external-service action was performed.
+
+**S-10 decision executed:** After confirming that GlobalShopCo-Headless PR #2 was still open, non-draft, `CLEAN`, one commit ahead of `main`, and changed exactly the three owner-authorized documentation paths at `5e32895b62cebc5a3e851c50f1da9ce4629ac233`, Darrin’s instruction “Scan repo then A” was executed as S-10 Option A.
+
+**Merge evidence:** [PR #2](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/2) merged into `main` at `2026-08-26T07:19:57Z`, merge commit [`1df3ecc`](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/commit/1df3ecc0c074942317b5cdd133d1d5ab34b09b12). The resulting `main` tree contains only `README.md`, `docs/architecture/HEADLESS_STOREFRONT_BOUNDARY.md`, and `docs/overseer/OVERSEER.md` beyond directories. The merge establishes documentation boundaries only; it does **not** authorize implementation, dependencies, provider/hosting selection, credential use, Shopify access, product or checkout action, testing, deployment, release, or any external integration.
+
+### Material independent finding — GlobalShopCo-Headless PR #1
+
+[PR #1](https://github.com/darrinbaldwindev/GlobalShopCo-Headless/pull/1) is a separate, open **draft** branch `agent/chatgpt/m3-baseline` at `64c6bc37a0879e4af16989814d153ea6aaf94e02`. It is `CLEAN` but changes six paths: `.gitignore`, `README.md`, two M3 documents, a plugin README, and `wp-content/plugins/globalshopco-headless/globalshopco-headless.php`. The PHP plugin path makes this a **code-bearing implementation proposal**, regardless of its draft description. It was not part of Darrin’s S-09/S-10 authorization, has not been merged or reviewed as an approved implementation path, and must not be treated as canonical or implementation-ready.
+
+**Portfolio scan summary:** AgentOS PR #6 remains open/`CLEAN` at `5a8e0907` with unverified validation; Franchise PRs #6 and #13 remain `DIRTY`; GemVerse and Overseer log PRs retain their recorded state; GlobalShopCo PR #3 remains an open draft non-canonical planning proposal; Amazon-Affiliate has no open PR. These observations do not change their existing blockers.
+
+**Status:** **S-10 CLOSED — exact documentation-only PR merged under Darrin’s explicit instruction.**
+
+### Active successors
+
+**H-01 — static scope/provenance review of GlobalShopCo-Headless PR #1:** Independently inspect its code and documents without execution, credentials, or external access; map each changed path to the approved M3 boundary; identify any source-of-truth, secret, provider, Shopify, WordPress, deployment, or implementation-authority gap; and distinguish static facts from claims. Do not merge, modify, test, deploy, or configure the PR.
+
+**S-12 remains owner-gated:** The private catalogue-evidence register specification has not been published. Its destination and publication scope require a separate Darrin choice. H-01 and S-12 are independent; neither authorizes implementation.
