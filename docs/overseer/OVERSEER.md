@@ -489,3 +489,15 @@ A future repository-creation request must state all of the following explicitly:
 **Notifications:** A material PR #3 merge-state notice was posted at https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5425774689. A distinct newly discovered M4.1 canonical-record addendum was posted at https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5425797105.
 
 **Current holds:** H-03 remains blocked on Darrin naming the implementation-capable reconciliation-plan owner. S-12 remains owner-gated pending the catalogue-register publication destination/scope decision. No code, test, Shopify/supplier/provider access, credential action, product publication, checkout, merge, deployment, release, or external action beyond the authorized affected-PR notices occurred.
+
+## S-13 return — M4.1 candidate evidence-coverage reconciliation — 2026-08-27
+
+**Scope:** Read-only review of Issue #6 and the current M4.1 research/template/shortlist/Batch-A records against the private S-11 evidence-register specification. No supplier, marketplace, Shopify, WordPress, provider, credential, product, shipping, test, deployment, or external action occurred.
+
+**Verified result:** **S-13 complete.** Batch A records ten exploratory Smart-Link home-organisation candidates with stated unknowns. Exact SKU mapping, dropship/trade eligibility, wholesale/landed cost, shipping/ETA/coverage, stock, product returns/warranty, product/material compliance evidence, and candidate-level Shopify taxonomy/WordPress vertical mapping remain absent or `UNKNOWN`/`UNVERIFIED`. The records appropriately hold candidates at `RESEARCH / PRICE-REQUEST` and make no launch-ready or free-delivery claim.
+
+**Confirmed documentation finding — score method:** Batch A labels candidates `48–61/100`, while `docs/catalogue/M4_1_SKU_SHORTLIST_PLAN.md` specifies a nine-factor 0–45 scale and 0–45 decision bands. No conversion, weighting, source-of-score, or mandatory-evidence override connects the two. Treat the /100 values only as non-decisional exploratory ranks until the method is normalised. This is a medium decision-provenance/false-precision risk, not a product rejection or financial conclusion.
+
+**Successor / precise hold:** **S-14 — M4.1 candidate-evidence and score-normalisation intake.** Trigger only on a new attributable Batch-A/source record or a Darrin scoring/evidence-register decision. Inspect changed records for exact SKU, provenance/date, supplier eligibility, cost/shipping assumptions, returns/warranty, compliance, taxonomy/vertical, and score-method alignment; return evidence status only. Do not contact suppliers, use accounts/credentials, source/purchase/price/list/publish products, configure Shopify/WordPress, perform financial recommendations, run code/tests, deploy, or contact external parties.
+
+**Notification boundary:** The reviewed M4.1 records are already on the default branch and no affected open PR contains them; no PR comment was posted under the PR-only notice rule.
