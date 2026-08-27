@@ -501,3 +501,25 @@ A future repository-creation request must state all of the following explicitly:
 **Successor / precise hold:** **S-14 — M4.1 candidate-evidence and score-normalisation intake.** Trigger only on a new attributable Batch-A/source record or a Darrin scoring/evidence-register decision. Inspect changed records for exact SKU, provenance/date, supplier eligibility, cost/shipping assumptions, returns/warranty, compliance, taxonomy/vertical, and score-method alignment; return evidence status only. Do not contact suppliers, use accounts/credentials, source/purchase/price/list/publish products, configure Shopify/WordPress, perform financial recommendations, run code/tests, deploy, or contact external parties.
 
 **Notification boundary:** The reviewed M4.1 records are already on the default branch and no affected open PR contains them; no PR comment was posted under the PR-only notice rule.
+
+## GSC-AUT-01 — first bounded GlobalShopCo autonomy-pilot task packet — 2026-08-27
+
+**Authority:** Darrin directed that GlobalShopCo be the first working model for portfolio autonomy, coordinated with AgentOS so evidence/control work is reused rather than duplicated. Manus remains the portfolio dispatcher. GPTChat’s GlobalShopCo/Shopify Overseer role is the requested Project Overseer target for this packet, but its live availability/capability is **`UNCONFIRMED`** until a durable acknowledgement appears.
+
+**Task:** **GSC-AUT-01 — acknowledge and return a log-only pilot receipt for the existing S-14 candidate-evidence/score-normalisation hold.** The task tests a durable Manus → Project Overseer → Manus handoff using current evidence; it does not perform research, source products, operate commerce systems, or claim a live autonomous workforce.
+
+| Packet element | Required control |
+|---|---|
+| Baseline | Current GlobalShopCo log head `1c03e6f`; S-13/S-14; M4.1 Batch-A records; shared autonomy registry. |
+| Permitted scope | Read the shared/project records; reconcile ownership/non-overlap; append acknowledgement/receipt only. |
+| Required acknowledgement/return | `ACKNOWLEDGED` / `UNCONFIRMED` / `BLOCKED`; target capability; parent/refs; accepted scope; explicit non-overlap with M4.1/M3; prohibited actions confirmed; evidence; confirmed/likely/unresolved blockers; confidence; exact S-14 trigger; bounded recommendation. |
+| Delegation | None for this first receipt. A future child requires a named capability and full evidence task packet. |
+| Prohibited scope | Supplier/marketplace contact; accounts/credentials; pricing/financial recommendation; product selection/sourcing/listing/publication; Shopify/WordPress action; source/configuration change; code/test/run; schedule/webhook/connector; merge/deploy/release; external communication. |
+
+**AgentOS reuse and authority reconciliation:** AgentOS `main` documents future repository-backed dispatch/queue fields. The GlobalShopCo pilot reuses their intent but adds explicit evidence/claim classification, confidence, return, and successor fields required by Manus portfolio governance. The AgentOS document’s GPTChat “higher-level authority” wording does not override Darrin’s current Manus-led portfolio hierarchy; it is treated as a future architecture proposal pending an exact compatible acknowledgement or an owner decision.
+
+**Pilot success condition:** A durable acknowledgement/receipt appears in the designated shared/project oversight log; Manus verifies it and sends the next bounded task/hold without Darrin relaying it. A task record, Git commit, `CLEAN` state, research claim, or assumed agent is not a receipt.
+
+**Next trigger:** Durable Project Overseer acknowledgement; a changed attributable Batch-A record; Darrin scoring/register/H-03 decision; or a material GlobalShopCo/AgentOS dispatch-document revision.
+
+**Coordination notice:** The `GSC-AUT-01` packet was posted once to the affected GlobalShopCo draft planning PR under Darrin’s standing, time-bounded PR-comment authorization: https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5433393991. The comment requests an acknowledgement/receipt through the designated log only; it does not authorise product research, supplier/contact/account action, commerce operation, source change, code/test execution, scheduling, merge, deployment, release, or external communication.
