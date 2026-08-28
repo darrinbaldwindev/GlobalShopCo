@@ -523,3 +523,13 @@ A future repository-creation request must state all of the following explicitly:
 **Next trigger:** Durable Project Overseer acknowledgement; a changed attributable Batch-A record; Darrin scoring/register/H-03 decision; or a material GlobalShopCo/AgentOS dispatch-document revision.
 
 **Coordination notice:** The `GSC-AUT-01` packet was posted once to the affected GlobalShopCo draft planning PR under Darrin’s standing, time-bounded PR-comment authorization: https://github.com/darrinbaldwindev/GlobalShopCo/pull/3#issuecomment-5433393991. The comment requests an acknowledgement/receipt through the designated log only; it does not authorise product research, supplier/contact/account action, commerce operation, source change, code/test execution, scheduling, merge, deployment, release, or external communication.
+
+## Comprehensive PR scan — PR #10 M4.1 evidence delta — 2026-08-28
+
+**Evidence:** A new open, non-draft, `CLEAN` GlobalShopCo PR [#10](https://github.com/darrinbaldwindev/GlobalShopCo/pull/10) at `fc9660a` adds four M4.1 Home Organisation research/progress documents. Static review finds published K&A unit prices/MOQs and candidate identities, United Living identifiers, and DPW shipping/competitor observations; it also records missing candidate-level freight, landed cost, dropship, stock, returns/warranty, compliance, and exact market validation.
+
+**Result:** This is useful research organisation but **does not release S-14, product publication, supplier/account action, pricing, free-delivery approval, H-03, C-03, M3 implementation, or GSC-AUT-01**. Research counts and supplier statements remain evidence-labelled/approximate claims rather than launch status. No durable Project Overseer acknowledgement was found.
+
+**Current task/hold:** `S-14` evidence/score-normalisation and `GSC-AUT-01` log-only acknowledgement remain controlling. Required return is exact SKU evidence, landed/delivery cost, stock/fulfilment/returns/compliance data, score reconciliation, and a durable receipt with capability/scope/prohibition/return fields.
+
+**Notification decision:** PR #10 is newly material. One deduplicated commentary-only notice is warranted after this record is pushed; it must not authorise supplier contact, commercial action, code/test, provider, merge, deployment, release, or production work. Detailed private record: `portfolio_pr_scan_henry_comparison_2026-08-28.md`.
