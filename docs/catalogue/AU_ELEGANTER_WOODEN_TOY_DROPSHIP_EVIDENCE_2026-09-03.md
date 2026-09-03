@@ -7,6 +7,14 @@
 
 Eleganter Australia states publicly that it sells to Australian businesses including online retailers, offers Australia-wide shipping, is based in Brisbane, Queensland, and usually dispatches within 24–48 business hours. Its public dropship page states that eligible online retailers can have Eleganter pack and ship products directly to the customer without the retailer holding stock; eligibility requires a live website and product-range alignment, so partner acceptance remains an external gate.
 
+The current public dropship page also states that the programme is limited to sales through the retailer's own website and excludes third-party platforms such as Amazon Australia, eBay and Temple & Webster. This is relevant to GlobalShopCo's intended owned-site/headless-store model but does not constitute partner approval.
+
+## Current public dropship cost/fulfilment terms
+
+Eleganter's publicly linked Drop Shipping Terms & Conditions state that there is **no additional dropshipping fee** and that handling costs are built into shipping costs. The same terms state that the dropship cost consists of the item price as listed plus freight and GST, and that there is no minimum order requirement for an individual drop-shipped order. They also state that goods are generally shipped within two working days unless a specific agreement applies.
+
+These terms materially improve the structure of the economics model, but **do not reveal an authorised GlobalShopCo trade cost**. The phrase "item price as listed" must not be assumed to equal a private wholesale/account price without confirming the applicable account pricing. Freight still needs to be confirmed for representative customer destinations and the exact GlobalShopCo account/order path.
+
 ## Current public product observations
 
 | SKU | Product | Public price inc GST | Public RRP | Weight | Stock | Evidence date |
@@ -34,10 +42,13 @@ The public evidence strengthens Eleganter as a viable Australian domestic dropsh
 - Australia-wide shipping;
 - Brisbane-based fulfilment;
 - stated usual dispatch of 24–48 business hours;
+- a published no-additional-dropship-fee statement;
+- no minimum order requirement for an individual dropship order;
 - identifiable SKUs, weights and public RRP observations;
-- a broad Kaper Kidz/Tooky Toy range.
+- a broad Kaper Kidz/Tooky Toy range;
+- an own-website-only restriction compatible with the intended owned-store model.
 
-It does **not** establish GlobalShopCo economics. Wholesale/trade cost, dropship fees, freight by destination, blind-shipping/branding, returns handling, current stock feed/API capability, account approval, and SKU-level compliance evidence remain unresolved.
+It does **not** establish GlobalShopCo economics. Authorised wholesale/trade cost, exact freight by destination, account pricing interpretation, blind-shipping/branding, returns handling, current stock feed/API capability, account approval, and SKU-level compliance evidence remain unresolved.
 
 ## Decision gate
 
@@ -46,19 +57,21 @@ It does **not** establish GlobalShopCo economics. Wholesale/trade cost, dropship
 Do not publish or purchase based on this snapshot alone. Before a SKU can become launch-ready, reconcile:
 
 1. authorised GlobalShopCo trade/wholesale cost;
-2. dropship fee and freight by representative Australian destinations;
-3. GST treatment and payment/Shopify costs;
-4. proposed retail price and free-delivery contribution;
-5. returns/warranty process;
-6. SKU-level Australian toy compliance evidence where applicable;
-7. live stock/feed reliability;
-8. partner acceptance and any brand/marketplace restrictions;
-9. realised contribution margin under conservative/base/strong scenarios.
+2. whether the dropship "item price as listed" is the applicable account price or whether a separate trade price applies;
+3. freight by representative Australian destinations;
+4. GST treatment and payment/Shopify costs;
+5. proposed retail price and free-delivery contribution;
+6. returns/warranty process;
+7. SKU-level Australian toy compliance evidence where applicable;
+8. live stock/feed reliability;
+9. partner acceptance and any brand/marketplace restrictions;
+10. realised contribution margin under conservative/base/strong scenarios.
 
 ## Sources
 
 - Eleganter Australia — About Us: https://www.eleganter.com.au/about_us
 - Eleganter Australia — Dropshipping with Eleganter: https://www.eleganter.com.au/page/dropship-with-us/
+- Eleganter Australia — Drop Shipping Terms & Conditions: https://www.eleganter.com.au/assets/files/Drop%20Shipping%20T%26Cs%282%29.pdf
 - Eleganter Australia — Kaper Kidz: https://www.eleganter.com.au/brand/kaper-kidz/
 - Product pages captured 2026-09-03: NG23272-R3, TH293, TKD002, NG23636-R3, NG23637-R3, LT044, TKD004, TY385.
 
