@@ -4,9 +4,9 @@
 Pet products are now a **high-priority first-vertical candidate**, but remain **NOT APPROVED FOR LAUNCH** until supplier/SKU economics are evidenced.
 
 ## Why the candidate strengthened
-Australia Post's 2026 eCommerce Report reports $1.4B spent online on pet products in 2025, up 15.2% year on year. It reports 1.2 million households buying pet products online and 37% of total pet-product spend occurring online. Average online basket was $120.62. citeturn0search16turn0search1
+Australia Post's 2026 eCommerce Report reports $1.4B spent online on pet products in 2025, up 15.2% year on year. It reports 1.2 million households buying pet products online and 37% of total pet-product spend occurring online. Average online basket was $120.62.
 
-The same report identifies clear delivery dates/speed, value, repeat purchasing and bundles as relevant opportunities. Its broader 2026 report says Australian shoppers are increasingly value-conscious, with average online basket size down to $96 overall, while 62% of shoppers use AI and 32% already use it for shopping advice. citeturn0search0turn0search2
+The same report identifies clear delivery dates/speed, value, repeat purchasing and bundles as relevant opportunities. Its broader 2026 report says Australian shoppers are increasingly value-conscious, with average online basket size down to $96 overall, while 62% of shoppers use AI and 32% already use it for shopping advice.
 
 ## Marketing implications
 
