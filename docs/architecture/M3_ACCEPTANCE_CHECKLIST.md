@@ -9,6 +9,8 @@
 - [ ] Canonical branch identified
 - [ ] Deployment/hosting target identified separately before deployment
 
+**Decision artifact:** See `H03_WORDPRESS_IMPLEMENTATION_SPECIFICATION.md` for complete implementation-ready specification.
+
 ## Gate B — Shopify integration
 
 - [ ] Non-production Shopify Storefront API path selected
