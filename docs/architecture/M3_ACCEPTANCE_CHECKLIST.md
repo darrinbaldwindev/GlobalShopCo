@@ -9,7 +9,9 @@
 - [ ] Canonical branch identified
 - [ ] Deployment/hosting target identified separately before deployment
 
-**Decision artifact:** See `H03_WORDPRESS_IMPLEMENTATION_SPECIFICATION.md` for complete implementation-ready specification.
+**Decision artifacts:**
+- `H03_WORDPRESS_IMPLEMENTATION_SPECIFICATION.md` - Complete implementation-ready specification
+- `M3_IMPLEMENTATION_SCAFFOLD.md` - Ready-to-execute code templates and implementation sequence
 
 ## Gate B — Shopify integration
 

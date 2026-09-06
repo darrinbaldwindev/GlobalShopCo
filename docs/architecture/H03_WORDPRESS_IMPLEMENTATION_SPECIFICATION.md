@@ -9,6 +9,8 @@
 This document provides the complete technical specification for the H-03 WordPress/headless implementation location gate. It identifies the exact proposed canonical location, interfaces, Shopify checkout handoff mechanism, controlled product-data boundary, and acceptance criteria needed for immediate M3 vertical slice implementation once owner authorization is received.
 
 ## Proposed Canonical Implementation Location
+**Implementation scaffold:** Ready-to-execute code templates and implementation sequence available in `M3_IMPLEMENTATION_SCAFFOLD.md`.
+
 
 ### Repository Structure
 

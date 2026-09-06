@@ -21,7 +21,7 @@ Do not allow M3 to expand into marketplace integrations, customer accounts, anal
 
 ## Coordination
 
-Manus Overseer should treat the M3 contract, acceptance checklist, and H-03 implementation specification as the current decision package. The H-03 specification (`docs/architecture/H03_WORDPRESS_IMPLEMENTATION_SPECIFICATION.md`) provides the complete implementation-ready technical specification including exact proposed canonical location, interfaces, Shopify checkout handoff mechanism, controlled product-data boundary, and acceptance criteria. Any proposed implementation location should be recorded before code is treated as authoritative.
+Manus Overseer should treat the M3 contract, acceptance checklist, H-03 implementation specification, and M3 implementation scaffold as the current decision package. The H-03 specification (`docs/architecture/H03_WORDPRESS_IMPLEMENTATION_SPECIFICATION.md`) provides the complete implementation-ready technical specification including exact proposed canonical location, interfaces, Shopify checkout handoff mechanism, controlled product-data boundary, and acceptance criteria. The M3 implementation scaffold (`docs/architecture/M3_IMPLEMENTATION_SCAFFOLD.md`) provides ready-to-execute code templates for immediate implementation once H-03 is authorized. Any proposed implementation location should be recorded before code is treated as authoritative.
 
 ## Decision rule
 
