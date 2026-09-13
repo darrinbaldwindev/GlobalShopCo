@@ -1,0 +1,13 @@
+{
+  "sessionType": "non_project",
+  "connector": {
+    "beforeEnabledUids": [],
+    "suggestions": [
+      {
+        "uid": "bbb0df76-66bd-4a24-ae4f-2aac4750d90b",
+        "name": "GitHub",
+        "suggestion": "enable"
+      }
+    ]
+  }
+}
