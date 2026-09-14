@@ -1,0 +1,29 @@
+name: Free-delivery economics fixture
+
+on:
+  push:
+    branches:
+      - agent/chatgpt/m4-home-organisation
+    paths:
+      - 'scripts/economics/free-delivery-contribution.mjs'
+      - 'scripts/economics/free-delivery-contribution.test.mjs'
+      - '.github/workflows/free-delivery-economics.yml'
+  pull_request:
+    paths:
+      - 'scripts/economics/free-delivery-contribution.mjs'
+      - 'scripts/economics/free-delivery-contribution.test.mjs'
+      - '.github/workflows/free-delivery-economics.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  economics-fixture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run deterministic free-delivery economics fixtures
+        run: node --test scripts/economics/free-delivery-contribution.test.mjs
