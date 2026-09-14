@@ -48,6 +48,10 @@ const cases = [
   ['stale evidence fails closed', { evidenceFresh: false }, OUTPUTS.HOLD],
   ['source identity mismatch fails closed', { sourceIdentityMatches: false }, OUTPUTS.HOLD],
   ['explicit supplier/policy conflict is not eligible', { explicitNotEligible: true }, OUTPUTS.NOT_ELIGIBLE],
+  ['permission plus stock conflict cannot be cherry-picked', { marketplacePermissionConflict: true, stockEvidenceConflict: true }, OUTPUTS.HOLD],
+  ['category plus identifier conflict cannot be cherry-picked', { categoryEligibilityEvidenceConflict: true, identifierRequirementEvidenceConflict: true }, OUTPUTS.HOLD],
+  ['fulfilment plus fee conflict cannot be cherry-picked', { fulfilmentModelEvidenceConflict: true, fulfilmentCostEvidenceConflict: true, referralFeeEvidenceConflict: true }, OUTPUTS.HOLD],
+  ['seller plus source identity conflict cannot be cherry-picked', { sellerOfRecordEvidenceConflict: true, sourceIdentityMatches: false }, OUTPUTS.HOLD],
 ];
 
 for (const [name, patch, expected] of cases) test(name, () => assert.equal(amazonChannelGate({ ...eligible, ...patch }), expected));
@@ -72,4 +76,18 @@ test('denied decision receipt preserves zero authority', () => {
   assert.equal(decision.publicationAuthority, false);
   assert.equal(decision.productionMutation, false);
   assert.equal(decision.networkIo, false);
+});
+
+test('multi-conflict decision receipt remains fail-closed and zero-authority', () => {
+  const decision = amazonChannelDecision({
+    ...eligible,
+    marketplacePermissionConflict: true,
+    stockEvidenceConflict: true,
+    referralFeeEvidenceConflict: true,
+  });
+  assert.equal(decision.disposition, OUTPUTS.HOLD);
+  assert.equal(decision.publicationAuthority, false);
+  assert.equal(decision.productionMutation, false);
+  assert.equal(decision.networkIo, false);
+  assert.equal(decision.canonicalInventoryAuthority, 'SHOPIFY');
 });
