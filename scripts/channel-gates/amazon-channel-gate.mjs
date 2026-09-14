@@ -11,17 +11,21 @@ const OUTPUTS = Object.freeze({
  * This function performs no network I/O and persists no catalogue, inventory,
  * listing, order, credential, or marketplace state. Shopify remains canonical.
  * Synthetic success never grants publication or production authority.
+ * Contradictory evidence always fails closed; a worker cannot select only the
+ * favourable side of a disagreement to manufacture eligibility.
  */
 export function amazonChannelGate(record) {
   if (!record || typeof record !== 'object') return OUTPUTS.HOLD;
 
   if (record.explicitNotEligible === true) return OUTPUTS.NOT_ELIGIBLE;
   if (record.placeholder === true) return OUTPUTS.HOLD;
+  if (record.evidenceConflict === true) return OUTPUTS.HOLD;
 
   if (!nonEmpty(record.exactSku) || !nonEmpty(record.identifierEvidence)) {
     return OUTPUTS.HOLD;
   }
 
+  if (record.marketplacePermissionConflict === true) return OUTPUTS.HOLD;
   if (record.marketplacePermission === 'DENIED') {
     return OUTPUTS.NOT_ELIGIBLE;
   }
@@ -29,6 +33,7 @@ export function amazonChannelGate(record) {
     return OUTPUTS.PERMISSION_REQUIRED;
   }
 
+  if (record.sellerOfRecordEvidenceConflict === true) return OUTPUTS.HOLD;
   if (record.sellerOfRecordEvidenceStatus !== 'PROVEN') return OUTPUTS.HOLD;
   if (record.sellerOfRecordPackagingCompatible === false) {
     return OUTPUTS.NOT_ELIGIBLE;
@@ -51,6 +56,7 @@ export function amazonChannelGate(record) {
     return OUTPUTS.HOLD;
   }
 
+  if (record.stockEvidenceConflict === true) return OUTPUTS.HOLD;
   if (record.stockSyncSafetyProven !== true) return OUTPUTS.HOLD;
   if (record.stockSyncEvidenceFresh !== true) return OUTPUTS.HOLD;
   if (record.stockVariantIdentityMatches !== true) return OUTPUTS.HOLD;
