@@ -1,0 +1,29 @@
+name: Amazon channel gate
+
+on:
+  push:
+    branches:
+      - agent/chatgpt/amazon-au-preflight
+    paths:
+      - 'scripts/channel-gates/amazon-channel-gate.mjs'
+      - 'scripts/channel-gates/amazon-channel-gate.test.mjs'
+      - '.github/workflows/amazon-channel-gate.yml'
+  pull_request:
+    paths:
+      - 'scripts/channel-gates/amazon-channel-gate.mjs'
+      - 'scripts/channel-gates/amazon-channel-gate.test.mjs'
+      - '.github/workflows/amazon-channel-gate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run deterministic Amazon channel gate fixtures
+        run: node --test scripts/channel-gates/amazon-channel-gate.test.mjs
