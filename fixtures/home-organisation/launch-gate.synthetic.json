@@ -1,0 +1,17 @@
+{
+  "candidate_id": "united-living-15510",
+  "supplier": "United Living / Boxsweden",
+  "sku": "15510",
+  "ean": "9340957115510",
+  "identity_state": "VERIFIED",
+  "retail_identity_state": "VERIFIED",
+  "wholesale_cost": null,
+  "supplier_freight": null,
+  "dropship_permission_state": "UNKNOWN",
+  "stock_state": "UNKNOWN",
+  "returns_warranty_state": "UNKNOWN",
+  "proposed_retail": null,
+  "free_delivery_contribution": null,
+  "commercial_state": "HOLD",
+  "launch_ready": false
+}
