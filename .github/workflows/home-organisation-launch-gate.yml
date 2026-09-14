@@ -1,0 +1,22 @@
+name: Home Organisation launch gate
+
+on:
+  push:
+    branches:
+      - agent/chatgpt/m4-home-organisation
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-launch-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate fail-closed commercial state
+        run: python fixtures/home-organisation/validate_launch_gate.py
