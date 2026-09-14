@@ -3,25 +3,13 @@ import test from 'node:test';
 import { amazonChannelGate, amazonChannelDecision, OUTPUTS } from './amazon-channel-gate.mjs';
 
 const eligible = Object.freeze({
-  exactSku: 'SYNTHETIC-SKU-001',
-  identifierEvidence: 'GTIN-SYNTHETIC',
-  marketplacePermission: 'PROVEN',
-  sellerOfRecordEvidenceStatus: 'PROVEN',
-  sellerOfRecordPackagingCompatible: true,
-  amazonCategoryEligibilityStatus: 'PROVEN',
-  identifierRequirementStatus: 'RESOLVED',
-  gtinExemptionClaimed: false,
-  gtinExemptionEvidenceStatus: 'NOT-APPLICABLE',
-  fulfilmentModelStatus: 'RESOLVED',
-  supplierMarketplaceFulfilmentCompatible: true,
-  stockSyncSafetyProven: true,
-  stockSyncEvidenceFresh: true,
-  stockVariantIdentityMatches: true,
-  fulfilmentCostKnown: true,
-  referralFeeCategoryKnown: true,
-  conservativeContributionAud: 12.34,
-  evidenceFresh: true,
-  sourceIdentityMatches: true,
+  exactSku: 'SYNTHETIC-SKU-001', identifierEvidence: 'GTIN-SYNTHETIC', marketplacePermission: 'PROVEN',
+  sellerOfRecordEvidenceStatus: 'PROVEN', sellerOfRecordPackagingCompatible: true,
+  amazonCategoryEligibilityStatus: 'PROVEN', identifierRequirementStatus: 'RESOLVED',
+  gtinExemptionClaimed: false, gtinExemptionEvidenceStatus: 'NOT-APPLICABLE', fulfilmentModelStatus: 'RESOLVED',
+  supplierMarketplaceFulfilmentCompatible: true, stockSyncSafetyProven: true, stockSyncEvidenceFresh: true,
+  stockVariantIdentityMatches: true, fulfilmentCostKnown: true, referralFeeCategoryKnown: true,
+  conservativeContributionAud: 12.34, evidenceFresh: true, sourceIdentityMatches: true,
 });
 
 const cases = [
@@ -37,10 +25,13 @@ const cases = [
   ['supplier identity on packing material is not eligible', { sellerOfRecordPackagingCompatible: false }, OUTPUTS.NOT_ELIGIBLE],
   ['unknown Amazon category eligibility fails closed', { amazonCategoryEligibilityStatus: 'UNKNOWN' }, OUTPUTS.HOLD],
   ['category ineligibility cannot be inferred away', { amazonCategoryEligibilityStatus: 'DENIED' }, OUTPUTS.HOLD],
+  ['conflicting category eligibility fails closed despite PROVEN value', { categoryEligibilityEvidenceConflict: true }, OUTPUTS.HOLD],
   ['unresolved GTIN or identifier requirement fails closed', { identifierRequirementStatus: 'UNKNOWN' }, OUTPUTS.HOLD],
+  ['conflicting identifier requirement fails closed despite RESOLVED value', { identifierRequirementEvidenceConflict: true }, OUTPUTS.HOLD],
   ['unsupported GTIN exemption claim fails closed', { gtinExemptionClaimed: true, gtinExemptionEvidenceStatus: 'UNKNOWN' }, OUTPUTS.HOLD],
   ['proven GTIN exemption evidence can satisfy the identifier evidence sub-gate', { gtinExemptionClaimed: true, gtinExemptionEvidenceStatus: 'PROVEN' }, OUTPUTS.ELIGIBLE],
   ['unresolved FBA or FBM fulfilment model fails closed', { fulfilmentModelStatus: 'UNKNOWN' }, OUTPUTS.HOLD],
+  ['conflicting fulfilment model fails closed despite RESOLVED value', { fulfilmentModelEvidenceConflict: true }, OUTPUTS.HOLD],
   ['supplier marketplace fulfilment conflict is not eligible', { supplierMarketplaceFulfilmentCompatible: false }, OUTPUTS.NOT_ELIGIBLE],
   ['unknown supplier marketplace fulfilment compatibility fails closed', { supplierMarketplaceFulfilmentCompatible: null }, OUTPUTS.HOLD],
   ['conflicting Shopify stock evidence fails closed despite green stock flags', { stockEvidenceConflict: true }, OUTPUTS.HOLD],
@@ -48,7 +39,9 @@ const cases = [
   ['stale Shopify stock evidence fails closed', { stockSyncEvidenceFresh: false }, OUTPUTS.HOLD],
   ['mismatched Shopify variant stock evidence fails closed', { stockVariantIdentityMatches: false }, OUTPUTS.HOLD],
   ['unknown fulfilment cost fails closed', { fulfilmentCostKnown: false }, OUTPUTS.HOLD],
+  ['conflicting fulfilment cost evidence fails closed despite known flag', { fulfilmentCostEvidenceConflict: true }, OUTPUTS.HOLD],
   ['unknown referral fee category fails closed', { referralFeeCategoryKnown: false }, OUTPUTS.HOLD],
+  ['conflicting referral fee evidence fails closed despite known flag', { referralFeeEvidenceConflict: true }, OUTPUTS.HOLD],
   ['negative conservative contribution is not eligible', { conservativeContributionAud: -0.01 }, OUTPUTS.NOT_ELIGIBLE],
   ['unknown conservative contribution fails closed', { conservativeContributionAud: null }, OUTPUTS.HOLD],
   ['review placeholder fails closed', { placeholder: true }, OUTPUTS.HOLD],
@@ -57,11 +50,7 @@ const cases = [
   ['explicit supplier/policy conflict is not eligible', { explicitNotEligible: true }, OUTPUTS.NOT_ELIGIBLE],
 ];
 
-for (const [name, patch, expected] of cases) {
-  test(name, () => {
-    assert.equal(amazonChannelGate({ ...eligible, ...patch }), expected);
-  });
-}
+for (const [name, patch, expected] of cases) test(name, () => assert.equal(amazonChannelGate({ ...eligible, ...patch }), expected));
 
 test('invalid records fail closed', () => {
   assert.equal(amazonChannelGate(null), OUTPUTS.HOLD);
