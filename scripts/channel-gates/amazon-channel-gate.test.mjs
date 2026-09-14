@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { amazonChannelGate, OUTPUTS } from './amazon-channel-gate.mjs';
+import { amazonChannelGate, amazonChannelDecision, OUTPUTS } from './amazon-channel-gate.mjs';
 
 const eligible = Object.freeze({
   exactSku: 'SYNTHETIC-SKU-001',
@@ -62,4 +62,21 @@ for (const [name, patch, expected] of cases) {
 test('invalid records fail closed', () => {
   assert.equal(amazonChannelGate(null), OUTPUTS.HOLD);
   assert.equal(amazonChannelGate('not-a-record'), OUTPUTS.HOLD);
+});
+
+test('synthetic all-green decision never grants publication or network authority', () => {
+  const decision = amazonChannelDecision(eligible);
+  assert.equal(decision.disposition, OUTPUTS.ELIGIBLE);
+  assert.equal(decision.publicationAuthority, false);
+  assert.equal(decision.productionMutation, false);
+  assert.equal(decision.networkIo, false);
+  assert.equal(decision.canonicalInventoryAuthority, 'SHOPIFY');
+});
+
+test('denied decision receipt preserves zero authority', () => {
+  const decision = amazonChannelDecision({ ...eligible, marketplacePermission: 'UNKNOWN' });
+  assert.equal(decision.disposition, OUTPUTS.PERMISSION_REQUIRED);
+  assert.equal(decision.publicationAuthority, false);
+  assert.equal(decision.productionMutation, false);
+  assert.equal(decision.networkIo, false);
 });
