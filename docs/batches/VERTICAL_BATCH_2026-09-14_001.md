@@ -1,6 +1,6 @@
 # GlobalShopCo Vertical Execution Batch — 2026-09-14 — Batch 001
 
-Status: ACTIVE / NON-PRODUCTION
+Status: EXECUTED / NON-PRODUCTION
 Branch: `agent/chatgpt/headless-niche-fill-2026-09-13`
 Starting branch head: `95b1ae5a810b6296ba62e75211f91e3380f25b28`
 
@@ -47,38 +47,78 @@ The headless layer excludes research-only / not-publication-approved / qualifica
 
 Maximise progress toward commercially useful headless niche assortments without lowering evidence standards.
 
-### Task A — Baby vertical 10-candidate qualification matrix — EXECUTE NOW
-Build a 10-candidate Baby screen across at least four subcategories using current Australian supplier evidence. Priority suppliers: Eleganter, 3 Little Crowns, Bellbird Kidz, Joy Baby / All 4 Kids, and other evidence-backed AU suppliers discovered during execution.
+### Task A — Baby vertical 10-candidate qualification matrix — EXECUTED
+Created `docs/catalogue/BABY_HEADLESS_QUALIFICATION_MATRIX_2026-09-14.md`.
 
-Candidate evidence target:
-- exact product identity / SKU where public;
-- supplier and first-party source;
-- AU fulfilment/drop-ship status;
-- acquisition price if public, otherwise explicit UNKNOWN/account-gated;
-- freight/free-delivery evidence;
-- exact retail comparison where available;
-- compliance/safety relevance;
-- headless subcategory;
-- decision: KEEP FOR DEEPER VALIDATION / HOLD / REJECT.
+Result:
+- 10 concrete candidates screened across Feeding, Bath & Care, Nursery, Travel/Portable Care and Early Development/Nursery Play.
+- Supplier lanes reconciled: Eleganter, Bellbird Kidz, Joy Baby / All 4 Kids, 3 Little Crowns.
+- Exact public SKUs captured where available.
+- Strongest current Baby candidates are compact Eleganter rattles, 3 Little Crowns organic wash/burp cloths, Bellbird Rainbow Stacker/Teether, 3 Little Crowns gauze blanket and Joy Baby B.Box plate.
+- Bulky Joy Baby change-table furniture rejected from the first-wave free-delivery test.
+- Zero Shopify drafts created because authenticated partner acquisition cost + landed freight are still missing.
 
-Prefer low-liability physical products: feeding accessories, bath/care, portable changing/travel care, nursery/home organisation and simple toys only where compliance evidence is explicit. Defer powered monitors, sleep-positioning products and unsupported medical/safety claims.
+### Task B — Safety cross-vertical reuse map — EXECUTED
+Created `docs/catalogue/SAFETY_HEADLESS_CROSS_VERTICAL_MAP_2026-09-14.md`.
 
-### Task B — Safety cross-vertical reuse map — EXECUTE AFTER BABY MATRIX
-Identify Baby/Pet candidates that can legitimately surface on Safety without creating duplicate Shopify identities. Map only evidence-supported fits such as baby proofing, pet travel safety, home containment and night visibility. Do not broaden safety tags for merchandising convenience.
+Result:
+- Defined legitimate reuse from Baby/Pet into Safety without duplicate Shopify identities.
+- Mapped Baby Proofing, Pet Travel Safety, Home Containment and Night Visibility.
+- Explicitly deferred Monitoring & Alerts until electrical/radio/subscription/compliance evidence is complete.
+- Added fail-closed rules preventing broad Safety tagging for ordinary baby products merely because they are made with child-safe materials.
 
-### Task C — Pet commercial unblock specification — EXECUTE IN PARALLEL
-Convert current Pet matrix blockers into exact account-data requirements so partner pricing can be evaluated immediately when available. Do not contact suppliers or create accounts unless separately authorised.
+### Task C — Pet commercial unblock specification — EXECUTED
+Created `docs/catalogue/PET_COMMERCIAL_UNLOCK_SPEC_2026-09-14.md`.
 
-### Task D — Shopify controlled draft creation — CONDITIONAL
-Create Shopify DRAFT qualification records only when a candidate has enough real evidence to support a serious commercial test. No ACTIVE publication. Do not replace A$0 placeholders with speculative retail-looking records merely because a supplier catalogue exists.
+Result:
+- Converted Pet from an open-ended research problem into a precise account-data blocker.
+- Defined exact Southern Pet, Ozdingo, Dropshipzone/New Aim and Essential Dog data required for immediate economics decisions.
+- Prioritised Southern Pet SKUs `GDAG2515`, `GDAG2522`, `GDAG2505`, `GDAG2600`, `GDAG2610` for authenticated trade-price evaluation.
+- Defined owned-site free-delivery contribution formula and bundle/add-on treatment for low-ticket SKUs.
 
-### Task E — Home Organisation validation — ANTI-IDLE FALLBACK
-If Baby/Pet pricing is account-gated, continue exact economics/competitor validation on surviving Home Organisation drafts. Preserve the Level-2 fixture branch/head.
+### Task D — Shopify controlled draft creation — NOT TRIGGERED
+Decision: no new Shopify qualification drafts in this batch.
 
-### Task F — Mobile & Computer supplier diversification — ANTI-IDLE FALLBACK
-Prefer passive accessories. Avoid repeating NewDeals commodity electronics already shown to be price-compressed.
+Reason:
+- Baby and Pet are product-rich but acquisition-economics gated.
+- Creating retail-looking drafts before authentic buy cost/freight evidence would increase catalogue noise and would not materially advance the headless launch gate.
 
-## Batch completion criteria
-A batch is useful when it closes at least one evidence gap, produces a durable candidate/rejection matrix, creates only justified controlled drafts, or identifies a precise owner/account blocker that unlocks the next commercial step.
+### Task E — Home Organisation validation — NOT REQUIRED THIS BATCH
+Independent Baby/Safety/Pet work remained productive, so fallback was not consumed.
 
-Batch completion does NOT mean site-wide GREEN, publication approval, merge, deployment or supplier commitment.
+### Task F — Mobile & Computer supplier diversification — NOT REQUIRED THIS BATCH
+Held for successor batch after a fresh scan.
+
+## Standing protocol persisted
+Created `docs/batches/VERTICAL_BATCH_PROTOCOL.md` so future owner `cont` / `continue autonomously` prompts explicitly invoke:
+
+`fresh scan -> batch file -> execute fullest useful task stack -> persist evidence -> successor queue`
+
+## Commits produced in this batch
+- `6d166c1789b2bdc9a161c44de3d7431e1e705025` — start vertical batch 001
+- `25d5ab01a66b8eb561153e922b7d0912df6ca924` — Baby headless qualification matrix
+- `3d4d3ee0eccccf4240f618fcd4e980e9c36f92e3` — Safety cross-vertical map
+- `f4e3f29e45f81c30994419eecc33952966c93070` — Pet commercial unlock specification
+- `78615aeb2e96aaa0a7e68388fddea533d321e2fb` — standing vertical batch protocol
+
+## Batch result
+
+Useful work completed:
+- Baby moved from unstructured placeholders to a 10-candidate commercial screen.
+- Safety gained an explicit reuse architecture tied to Baby/Pet evidence.
+- Pet blocker was narrowed to authenticated partner economics and exact fulfilment terms.
+- No weak Shopify padding occurred.
+- Level-2 fixture remained untouched.
+- No ACTIVE publication, merge, deployment, supplier contact, account creation, purchase or credentials action occurred.
+
+## Successor queue for next `cont`
+
+After the mandatory fresh rescan, highest-value likely tasks are:
+1. exact current AU competitor checks on the strongest Baby candidates;
+2. search for any first-party supplier lane exposing real partner/wholesale acquisition price publicly enough to close economics without account creation;
+3. Home Organisation surviving-draft revalidation where price/stock evidence has aged;
+4. Mobile & Computer passive-accessory supplier diversification;
+5. Safety specialist low-complexity product discovery only where Baby/Pet reuse leaves a genuine assortment gap;
+6. if authenticated supplier/account pricing becomes available, immediately apply the Pet/Baby unlock specs and create controlled Shopify DRAFT qualification records only for survivors.
+
+Batch completion does NOT mean site-wide GREEN, publication approval, merge or deployment.
