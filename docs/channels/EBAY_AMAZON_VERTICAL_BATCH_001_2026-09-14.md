@@ -1,6 +1,6 @@
 # GlobalShopCo eBay + Amazon Vertical Batch 001 — 2026-09-14
 
-Status: ACTIVE / RESEARCH + ASSURANCE / FAIL-CLOSED
+Status: EXECUTED / RESEARCH + ASSURANCE / FAIL-CLOSED
 
 ## Trigger semantics
 
@@ -77,21 +77,151 @@ Before any pilot publication:
 - verify duplicate-listing protection and oversell controls;
 - do not test production publication during a known marketplace/API incident.
 
-## Batch 001 execution queue
+## Batch 001 executed results
 
-1. Reconcile repo control state against live owner evidence for Marketplace Connect/eBay.
-2. Research current public evidence for Dropshipzone/New Aim marketplace restrictions and seller-of-record compatibility.
-3. Re-test the strongest product families against current eBay AU and Amazon AU retail ceilings.
-4. Identify exact public NewDeals/Dropshipzone-linked products whose supplier-direct retail pricing makes marketplace resale structurally weak.
-5. Produce a revised P0/P1/HOLD/REJECT queue.
-6. Record unresolved authenticated-data requirements separately from public-research tasks.
+### A. Repo control-state reconciliation — COMPLETE
 
-## Completion standard
+Issue #17 received a durable reconciliation comment on 2026-09-14.
 
-A batch is complete only when the independent tasks above are actually executed and results are recorded. A worker claim or attractive sold-count alone is not completion.
+Verified live owner evidence:
+- Shopify Marketplace Connect is already installed.
+- eBay Australia account `globalshopco` is already connected.
 
-No overall GREEN while exact wholesale, freight, marketplace permission, and channel-specific contribution remain unresolved.
+Therefore the old pre-install assumption in issue #17 is stale. Current gate is not `choose/install an eBay connector`; it is `assure the already-installed connector before publication or scale`.
+
+This does not make Marketplace Connect GREEN. Still unverified:
+- mapping correctness;
+- inventory propagation;
+- eBay order import into Shopify;
+- tracking / fulfilment propagation;
+- duplicate / oversell protection;
+- reliability during eBay API incidents;
+- exact eBay pricing-rule behaviour.
+
+### B. Dropshipzone marketplace eligibility — MATERIAL NEW EVIDENCE
+
+Public Dropshipzone guidance explicitly states that Dropshipzone supplier products can be used to dropship on Amazon and eBay and that retailer inventory can be uploaded / integrated into those channels.
+
+Dropshipzone's shipping documentation also states that its postcode-zone shipping model can sync with major marketplaces including Amazon and eBay.
+
+This materially improves the platform-level marketplace-fit state from `UNKNOWN` to `SUPPORTED AT PLATFORM LEVEL`.
+
+However, exact supplier/SKU approval is still not automatic because:
+- Dropshipzone's own terms state purchases remain subject to supplier-specific terms;
+- supplier onboarding explicitly asks whether a supplier can blind ship and provide tracking;
+- eBay and Amazon still require seller-of-record / third-party fulfilment conditions to be satisfied.
+
+Therefore per-SKU classification remains fail-closed until exact supplier evidence confirms packing identity / blind shipping / tracking / returns / stock-control compatibility.
+
+### C. Dropshipzone fulfilment evidence — VERIFIED
+
+Current public Dropshipzone guidance establishes:
+- suppliers generally ship from Australian distribution centres;
+- dispatch is usually within 1–2 business days after payment;
+- suppliers must upload tracking;
+- postcode-zone shipping includes Standard, Defined and Advanced templates;
+- undeliverable locations can be explicitly represented in SKU data;
+- retailer-facing shipping data can be used for marketplace pricing and delivery controls.
+
+This means the main blocker is no longer `does Dropshipzone conceptually support eBay/Amazon?`; it is now `what are the exact retailer price, freight, supplier terms and stock values for each candidate SKU?`.
+
+### D. Product-economics filter — CURRENT PRIORITY
+
+Retain as P0 source/economics targets:
+1. premium bamboo / quality expandable drawer-divider multipacks;
+2. clear pantry / fridge bin multipacks;
+3. compact cupboard / under-shelf organisers above the sub-A$15 commodity tier;
+4. compact spice / bottle / pantry organisers with A$25–60 marketplace ceilings;
+5. compact authorised pet accessories where brand-direct competition does not remove reseller margin.
+
+P1 / conditional:
+- CARLA HOME under-sink organiser — only if authenticated wholesale + freight leaves material headroom below public NewDeals retail and current marketplace ceiling;
+- CARLA HOME microwave rack — same condition.
+
+REJECT / first-wave avoid:
+- Artiss foldable laptop desk where supplier-direct public retail already undercuts viable marketplace resale;
+- Artiss 5-tier corner shelf for the same reason;
+- bulky Artiss / Keezi furniture already rejected by prior batches;
+- commodity vacuum-storage sets with unresolved leakage / returns risk;
+- products whose supplier-direct retail price consumes marketplace contribution.
+
+### E. Integration strategy — REVISED
+
+Do not install a second eBay connector merely because issue #17 historically preferred another integration.
+
+Current strategy:
+1. keep Shopify canonical;
+2. treat Marketplace Connect as the installed eBay bridge under assurance;
+3. validate read/sync behaviour before any listing pilot;
+4. only research replacement connectors if Marketplace Connect fails evidence-based acceptance criteria;
+5. do not run two marketplace-authority connectors concurrently.
+
+Amazon remains independent. No Amazon connection has been verified in Batch 001.
+
+## Revised queue after Batch 001
+
+### P0 — authenticated data closure
+For the first candidate pool, capture from Dropshipzone retailer access:
+- exact SKU;
+- retailer / wholesale price incl/ex GST treatment;
+- current stock;
+- dispatch warehouse / supplier identity where visible;
+- postcode freight to representative metro + regional destinations;
+- supplier-specific marketplace / blind-shipping terms where exposed;
+- returns / warranty;
+- exact product dimensions / packed weight.
+
+### P0 — connector assurance
+Once eBay API/service health is normal:
+- inspect Marketplace Connect Listings;
+- inspect Mapping;
+- inspect Orders;
+- verify no duplicate listing state;
+- verify one safe inventory-sync path before any publication pilot.
+
+### P1 — exact product candidates
+Prioritise exact source candidates in this order:
+1. premium bamboo / quality divider set;
+2. clear bin multipack;
+3. under-shelf / cupboard multipack;
+4. compact spice / bottle organiser;
+5. compact dish / pantry organiser;
+6. compact pet accessory with clear marketplace permission.
+
+### P1 — Amazon setup readiness
+Before connecting Amazon:
+- verify seller account exists and is eligible;
+- verify Marketplace Connect Amazon connection path;
+- keep Amazon assortment independent of eBay assortment;
+- validate ASIN / GTIN / brand restrictions and Buy Box competition per SKU.
+
+## Authenticated-data requirements that public research cannot close
+
+1. Dropshipzone retailer price for exact SKUs.
+2. Exact supplier postcode freight for candidate SKUs.
+3. Supplier-specific blind-shipping / packing-identity detail where not public.
+4. Live Dropshipzone stock at approval time.
+5. Marketplace Connect current listing / mapping / order-sync state inside the installed app.
+6. Amazon Seller Central gating / brand eligibility once Amazon is connected.
+
+## Batch conclusion
+
+Batch 001 materially reduced uncertainty:
+- Dropshipzone is now verified as supporting Amazon/eBay at platform level.
+- The repo's historical eBay connector state was reconciled against actual live Shopify state.
+- The eBay integration problem is now assurance, not installation.
+- Product research should now bias toward exact authenticated supplier economics, not more generic demand discovery.
+
+Overall state remains AMBER / NO OVERALL GREEN.
+
+No product was published, no marketplace setting changed, no purchase or supplier contact occurred, and no production Shopify mutation was performed.
 
 ## Execution log
 
-- 2026-09-14: batch file created after repository scan. Execution in progress.
+- 2026-09-14: repository scanned before work.
+- 2026-09-14: branch `agent/ebay-amazon/vertical-batch-001` created from exact scanned head.
+- 2026-09-14: vertical batch protocol persisted in this file.
+- 2026-09-14: issue #17 reconciled with verified live Marketplace Connect + eBay connection state.
+- 2026-09-14: Dropshipzone marketplace, shipping, supplier-term and tracking evidence researched and reconciled.
+- 2026-09-14: product and integration priorities revised.
+- 2026-09-14: Batch 001 execution complete; next `cont` starts with a fresh repo scan and successor batch.
