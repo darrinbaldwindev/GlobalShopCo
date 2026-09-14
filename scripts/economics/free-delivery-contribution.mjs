@@ -26,14 +26,14 @@ export function freeDeliveryContribution(input) {
   if (unknown.length) return receipt(STATES.HOLD, null, unknown.map((key) => `unknown:${key}`));
   if (input.sellingPriceAud <= 0) return receipt(STATES.REJECT, null, ['non-positive-selling-price']);
 
-  const landedAndChannelCost = round2(
+  const landedAndChannelCostAud = round2(
     input.supplierUnitCostAud +
     input.outboundFreightAud +
     input.channelFeeAud +
     input.paymentFeeAud +
     input.returnsWarrantyAllowanceAud
   );
-  const contributionAud = round2(input.sellingPriceAud - landedAndChannelCost);
+  const contributionAud = round2(input.sellingPriceAud - landedAndChannelCostAud);
   const bufferAfterTargetAud = round2(contributionAud - input.targetMarginAud);
   const state = contributionAud > 0 && bufferAfterTargetAud >= 0 ? STATES.PASS : STATES.REJECT;
 
