@@ -42,6 +42,17 @@ test('negative freight is invalid and fails closed', () => {
   assert.equal(freeDeliveryContribution({ ...viable, outboundFreightAud: -1 }).state, STATES.HOLD);
 });
 
+test('non-finite channel fee fails closed', () => {
+  assert.equal(freeDeliveryContribution({ ...viable, channelFeeAud: Number.NaN }).state, STATES.HOLD);
+});
+
+test('channel fee is counted exactly once', () => {
+  const base = freeDeliveryContribution({ ...viable, channelFeeAud: 0 });
+  const charged = freeDeliveryContribution({ ...viable, channelFeeAud: 4 });
+  assert.equal(base.landedAndChannelCostAud + 4, charged.landedAndChannelCostAud);
+  assert.equal(base.contributionAud - 4, charged.contributionAud);
+});
+
 test('zero selling price is rejected', () => {
   assert.equal(freeDeliveryContribution({ ...viable, sellingPriceAud: 0 }).state, STATES.REJECT);
 });
