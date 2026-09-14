@@ -35,6 +35,14 @@ export function amazonChannelGate(record) {
     return OUTPUTS.HOLD;
   }
 
+  // Issue #23 requires these exact-SKU facts before publication eligibility.
+  // Unknown/missing evidence must fail closed rather than being inferred from
+  // generic supplier or owned-site suitability.
+  if (record.amazonCategoryEligibilityProven !== true) return OUTPUTS.HOLD;
+  if (record.identifierRequirementResolved !== true) return OUTPUTS.HOLD;
+  if (record.fulfilmentModelResolved !== true) return OUTPUTS.HOLD;
+  if (record.stockSyncSafetyProven !== true) return OUTPUTS.HOLD;
+
   if (record.fulfilmentCostKnown !== true) return OUTPUTS.HOLD;
   if (record.referralFeeCategoryKnown !== true) return OUTPUTS.HOLD;
 
