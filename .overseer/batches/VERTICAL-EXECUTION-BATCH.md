@@ -184,3 +184,125 @@ Next full batch should:
 4. calculate conservative contribution ceilings before adding a candidate to the pilot;
 5. keep no more than 5–10 serious pilot SKUs in the active eBay lane;
 6. preserve all UNKNOWNs and fail closed.
+
+---
+
+## Batch 004 continuation — exact AU source hunt
+
+Fresh-scan state before execution:
+- default branch remains `79d50227fe19826d42c43e7dec15ce245ad58e40`;
+- draft PR #25 remains open/unmerged and mergeable;
+- no new authenticated supplier or Marketplace Connect evidence was available in the repo;
+- therefore this cycle followed the replenishment rule and expanded exactly one category with exact AU-source candidates: premium drawer dividers.
+
+### New exact candidate 1 — CARLA HOME 4 Pack Bamboo Adjustable Kitchen Drawer Dividers
+
+Verified public identity:
+- exact SKU / catalogue number: `V178-36023`;
+- brand: CARLA HOME;
+- pack: 4 dividers;
+- size: adjustable 44–55 cm;
+- package dimensions: approximately 10 × 56 × 7 cm;
+- package weight: approximately 1.3 kg;
+- current Bunnings Marketplace retail observation: A$44.95 delivered, sold and delivered by Wilson Trading Import Pty Ltd;
+- other current Australian retail observations span about A$54.99–A$66.99;
+- current exact-title eBay observations are materially higher at roughly A$56.99 and above, with some branded listings around A$86–A$92 and no evidence here that those higher asks represent healthy sell-through.
+
+Commercial interpretation:
+- this is now an exact AU-market candidate, not merely a generic product-family hypothesis;
+- the Bunnings A$44.95 delivered benchmark is the key conservative retail-pressure signal;
+- do not use the A$86–A$92 eBay asks as the base price without sold evidence;
+- marketplace permission, authenticated Dropshipzone/NewDeals trade price, exact postcode freight and seller-of-record/blind-shipping terms remain UNKNOWN;
+- provisional eBay classification: `HOLD / P0 AUTHENTICATED-ECONOMICS TARGET`.
+
+Conservative Pro-fee screening at an exact-title eBay price of A$56.99, using 13.4% + A$0.30 seller-fee screen and 15% contribution reserve:
+- combined product-cost + outbound-freight ceiling ≈ A$40.50 before returns, integration cost, advertising, support and GST reconciliation;
+- this is a SCREENING CEILING only, not an approved margin;
+- because Bunnings sells the exact item at A$44.95 delivered, real sustainable marketplace pricing may need to be materially below A$56.99, so acceptable landed cost should be lower than A$40.50.
+
+### New exact candidate 2 — CARLA HOME 8 Pack Bamboo Adjustable Kitchen Drawer Dividers
+
+Verified public identity:
+- exact SKU / MPN: `V178-36045`;
+- EAN/UPC: `0705514360458`;
+- brand: CARLA HOME;
+- pack: 8 dividers;
+- package dimensions: approximately 9 × 60 × 16 cm;
+- package weight: approximately 2.5 kg;
+- current Australian public retail observations around A$96.75–A$103.60;
+- exact eBay listing observed at A$111.00 from an Australian seller with 95.3% positive feedback and no returns accepted.
+
+Commercial interpretation:
+- exact SKU identity and Australian retail/eBay presence are now verified;
+- the 2.5 kg packed weight materially weakens the free-delivery advantage relative to the 4-pack;
+- higher selling price creates more gross-dollar headroom, but exact supplier freight becomes more important;
+- no sold-count evidence found in this cycle that justifies treating A$111 as proven demand;
+- provisional classification: `HOLD / SECONDARY`, behind `V178-36023` until authenticated cost/freight arrives.
+
+### New exact market evidence — CARLA HOME pantry organiser
+
+The existing archived Shopify SKU `V178-36126` now has stronger exact-product retail pressure evidence:
+- Bunnings Marketplace: A$49.95 delivered, seller Wilson Trading Import Pty Ltd;
+- Harvey Norman Customer Direct: A$46 with delivery promotion, product reference `36126-WT`;
+- NewDeals public retail has also shown this family around A$49.99 delivered.
+
+This confirms the former Shopify A$69.95 draft was not marketplace-competitive without a much lower authenticated trade cost. Keep `V178-36126` out of the first-wave eBay pilot unless trade price + freight supports a substantially lower retail position.
+
+### Supplier-ecosystem evidence tightened
+
+Dropshipzone public category pages continue to expose product breadth while keeping the decision-critical fields behind authenticated retailer login:
+- price;
+- stock level;
+- supplier performance;
+- shipping.
+
+Dropshipzone public FAQ separately confirms AU suppliers must hold physical Australian inventory, be GST registered and provide a 12-month warranty, but this does not by itself prove marketplace permission, blind shipping or exact SKU economics.
+
+### Batch 004 pilot ranking change
+
+Active eBay pilot/research queue is now capped to serious exact candidates:
+1. `GDAG2515` — Southern Pet / GiGwi Elephant — HOLD, strongest permission-required pet candidate.
+2. `V178-36023` — CARLA HOME 4-pack bamboo dividers — NEW P0 HOLD, exact SKU now verified.
+3. `GDAG2522` — Southern Pet / GiGwi Dino — HOLD.
+4. `GDAG2505` — Southern Pet / GiGwi Rabbit — HOLD.
+5. `V178-36335` — CARLA HOME under-sink organiser — HOLD.
+6. `V178-36336` — CARLA HOME microwave rack — HOLD.
+7. `V178-36045` — CARLA HOME 8-pack bamboo dividers — HOLD / secondary due 2.5 kg freight.
+8. `GDAG2610` — GiGwi Large Duck — HOLD pending exact comp/economics.
+
+Removed from active first-wave pilot:
+- `GDAG2600` standalone;
+- `V178-36126` over-door pantry organiser unless authenticated trade economics strongly overturn current public retail pressure;
+- Artiss corner shelf;
+- Artiss laptop desk;
+- bulky storage/furniture candidates.
+
+### Batch 004 next authenticated-data request
+
+Highest-value exact values now are:
+1. Dropshipzone/NewDeals authenticated retailer cost + live stock + postcode freight for `V178-36023`.
+2. Same for `V178-36045`.
+3. Same for `V178-36335` and `V178-36336`.
+4. Supplier-specific marketplace permission / blind-shipping / packing-identity terms for those four SKUs.
+5. Southern Pet trade price + marketplace approval for `GDAG2515`, `GDAG2522`, `GDAG2505`.
+6. Marketplace Connect current incident / Listings / Mapping / Orders state before any pilot acceptance test.
+
+### Batch 004 assurance state
+
+- Premium drawer-divider family: AMBER+, because exact supplier-family SKUs are now identified; economics still locked.
+- `V178-36023`: AMBER / P0 HOLD.
+- `V178-36045`: AMBER / HOLD-secondary.
+- `V178-36126`: RED/HOLD for first-wave eBay unless authenticated economics overturn retail compression.
+- Southern Pet compact GiGwi: AMBER / PERMISSION-REQUIRED.
+- Marketplace Connect eBay pilot: RED/HOLD until reliability and incident state clear.
+- Overall programme: AMBER / NO OVERALL GREEN.
+
+### Replenished next cycle
+
+Next autonomous cycle should:
+1. fresh-scan repo and exact branch head;
+2. inspect any authenticated supplier/app evidence first;
+3. if none exists, source-hunt one additional exact compact Home/Kitchen SKU family only;
+4. prefer exact SKUs with package weight under ~1.5 kg and current Australian retail above ~A$35;
+5. calculate conservative landed-cost ceilings before admission to the active 5–10 SKU pilot;
+6. keep the active pilot capped and remove weaker candidates rather than continuously expanding it.
