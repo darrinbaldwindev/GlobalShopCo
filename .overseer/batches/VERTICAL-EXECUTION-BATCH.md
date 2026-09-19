@@ -95,7 +95,7 @@ Each row should capture, where available:
 - [x] Establish issue #40 as the master 50-per-category control.
 - [x] Preserve Shopify as master catalogue and headless sites as curated subsets.
 - [x] Verify repo vertical-batch adoption doctrine.
-- [x] Create this canonical batch file.
+- [x] Create canonical vertical batch file.
 
 ### Lane B — Existing 50-row pools
 - [x] Boho / Women's fashion: 50 exact candidates in issue #36.
@@ -104,39 +104,32 @@ Each row should capture, where available:
 - [ ] Upgrade these pools from exact research candidates to landed-economics / supplier-rights qualification where public evidence permits.
 
 ### Lane C — Home master-category expansion
-Build fresh 50-row evidence pools without reusing commercially weak Home Organisation rows merely to satisfy counts.
-
-Priority sequence:
-- [x] Home & Garden — 50 exact demand-screen rows recorded in issue #41.
-- [x] Kitchen & Dining — 50 exact demand-screen rows recorded in issue #42.
-- [ ] Home Decor — 50
-- [ ] Bedding & Bath — 50
-- [ ] Furniture — 50
-- [ ] Garden & Outdoor — 50
-
-Prefer compact/light, low-breakage, low-return, bundle-friendly, obvious-use products with AU stock/fast AU fulfilment and margin headroom for free delivery.
+- [x] Home & Garden — #41.
+- [x] Kitchen & Dining — #42.
+- [x] Home Decor — #43.
+- [x] Bedding & Bath — #44.
+- [ ] Furniture — exact demand surface insufficient in latest pass; fail closed rather than pad rows.
+- [ ] Garden & Outdoor — 50.
 
 ### Lane D — Fashion expansion beyond Boho
 - [ ] Women's Clothing — reconcile Boho 50 against bestseller evidence and wholesale economics.
 - [ ] Fashion & Apparel — build master mix beyond Boho where demand evidence supports it.
-- [ ] Men's Clothing — 50
-- [ ] Footwear — 50
-- [ ] Accessories — 50
+- [ ] Men's Clothing — 50.
+- [ ] Footwear — 50.
+- [ ] Accessories — 50.
 
 ### Lane E — Beauty / personal care
-- [ ] Health & Beauty — 50
-- [ ] Skin Care — 50
-- [ ] Hair Care — 50
-- [ ] Personal Care — 50
-- [ ] Makeup — 50
+- [ ] Health & Beauty — 50.
+- [ ] Skin Care — 50.
+- [ ] Hair Care — 50.
+- [ ] Personal Care — 50.
+- [ ] Makeup — 50.
 - [ ] Supplements — research-only until higher compliance/claims gate is satisfied; do not force unsafe qualification.
-
-Prefer non-ingestible, low-compliance, lightweight, trusted supplier paths first.
 
 ### Lane F — Family / care
 - [x] Baby, Pet & Safety — 50 exact research products captured.
-- [ ] Kids & Baby — 50 exact products, with lower-risk care/feeding/travel/accessory items first.
-- [ ] Close supplier cost/freight/fulfilment evidence for the strongest low-risk products from #38.
+- [ ] Kids & Baby — 50 exact products.
+- [ ] Close supplier cost/freight/fulfilment evidence for strongest low-risk products from #38.
 
 ### Lane G — Tech catalogue structure
 - [x] 50 exact Tech & Everyday Gear products captured in #39.
@@ -144,66 +137,50 @@ Prefer non-ingestible, low-compliance, lightweight, trusted supplier paths first
 - [ ] Close authorised-reseller / wholesale path for branded products; otherwise reject branded family.
 - [ ] Revalidate Artiss/NewDeals exact account economics and fulfilment identity.
 
-## Executed this cycle
+## Executed cycles
 
-1. Fresh-scanned repository root and `.overseer` adoption pointer.
-2. Created this canonical batch file at `.overseer/batches/VERTICAL-EXECUTION-BATCH.md`.
-3. Reconciled live Shopify master-category model to issue #40.
-4. Built and durably logged **Home & Garden 50-row exact demand-screen pool** in issue #41.
-5. Built and durably logged **Kitchen & Dining 50-row exact demand-screen pool** in issue #42.
-6. Preserved hard commercial boundaries: market demand evidence is not sourcing permission; retail price is not wholesale cost; no row was promoted to launch-ready without landed economics.
-7. Identified lower-risk next-pass cohorts in both new pools for supplier/economics closure.
+### Cycle 1
+- Created canonical batch file.
+- Built Home & Garden 50-row pool (#41).
+- Built Kitchen & Dining 50-row pool (#42).
+
+### Cycle 2 — maximised category batch `MAXIMISED-CATEGORY-BATCH-2026-09-19-02.md`
+- Built Home Decor 50-row exact demand-screen pool (#43).
+- Built Bedding & Bath 50-row exact demand-screen pool (#44).
+- Identified lower-risk next-pass cohorts for both.
+- Explored Furniture; current search surface confirmed category breadth and demand but did not expose enough exact current products to produce a defensible 50-row list. Lane held rather than fabricated.
 
 ## Verification snapshot
 
 Evidence-backed 50-row pools now durably exist for:
 
-- Boho / Women's fashion — #36
-- Baby / Pet / Safety — #38
-- Tech & Everyday Gear — #39
-- Home & Garden — #41
-- Kitchen & Dining — #42
+1. Boho / Women's fashion — #36
+2. Baby / Pet / Safety — #38
+3. Tech & Everyday Gear — #39
+4. Home & Garden — #41
+5. Kitchen & Dining — #42
+6. Home Decor — #43
+7. Bedding & Bath — #44
 
-This equals **250 exact research/demand-screen rows across five major pools**, before overlap/reuse and before claiming owned-site qualification.
+This equals **350 exact research/demand-screen rows across seven major pools**, before overlap/reuse and before claiming owned-site qualification.
 
-No production Shopify mutation, publication, supplier contact, purchase, paid app, credential change, marketplace listing, merge or deployment occurred in this cycle.
-
-## Acceptance for this batch cycle
-
-- [x] canonical batch file created/reconciled;
-- [x] multiple category evidence pools materially increased;
-- [x] weak/high-risk products were held/rejected instead of lowering criteria;
-- [x] supplier/economics blockers recorded;
-- [x] production state left unchanged;
-- [x] next highest-value tasks replenished.
+No production Shopify mutation, publication, supplier contact, purchase, paid app, credential change, marketplace listing, merge or deployment occurred.
 
 ## Replenished priority queue
 
-P0. **Home Decor — 50 exact demand-screen products.**  
-P1. **Bedding & Bath — 50 exact demand-screen products.**  
+P0. **Furniture — obtain exact-product surface and complete 50.**  
+P1. **Garden & Outdoor — 50 exact demand-screen products.**  
 P2. **Women's Clothing / Boho supplier-economics closure** for strongest 10.  
 P3. **Baby/Pet/Safety lower-risk supplier-economics closure.**  
-P4. **Furniture — 50** and **Garden & Outdoor — 50**.  
-P5. **Accessories — 50**, then Men's Clothing and Footwear.  
-P6. **Health & Beauty / Skin Care / Hair Care / Personal Care / Makeup — 50 each.**  
-P7. **Kids & Baby — 50** beyond overlap with combined Baby/Pet/Safety site.  
-P8. **Tech master collection decision + qualification closure.**  
-P9. **Supplements** only under the higher compliance/claims gate.
+P4. **Accessories — 50**, then Men's Clothing and Footwear.  
+P5. **Health & Beauty / Skin Care / Hair Care / Personal Care / Makeup — 50 each.**  
+P6. **Kids & Baby — 50** beyond overlap with combined Baby/Pet/Safety site.  
+P7. **Tech master collection decision + qualification closure.**  
+P8. **Supplements** only under the higher compliance/claims gate.
 
 ## Durable reporting
 
-Use existing category/control issues where possible. Create a new category issue only when there is no suitable durable control point. Record:
-
-- evidence date
-- exact rows/products
-- demand/bestseller source
-- supplier evidence
-- economics status
-- strongest next-pass cohort
-- rejects/holds and reasons
-- explicit UNKNOWNs
-- next vertical action
-- hard boundaries observed
+Use existing category/control issues where possible. Create a new category issue only when there is no suitable durable control point. Record evidence date, exact rows/products, demand/bestseller source, supplier evidence, economics status, strongest next-pass cohort, rejects/holds and reasons, explicit UNKNOWNs, next vertical action and hard boundaries observed.
 
 ## Replenishment rule
 
