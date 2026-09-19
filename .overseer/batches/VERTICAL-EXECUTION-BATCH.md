@@ -3,6 +3,7 @@
 **Batch owner:** GPTChat GlobalShopCo Overseer  
 **Execution mode:** autonomous / vertical / evidence-first  
 **Created:** 2026-09-19  
+**Last execution:** 2026-09-19  
 **Canonical control:** GlobalShopCo issue #40 — 50 qualified products per Shopify category
 
 ## Mission
@@ -106,8 +107,8 @@ Each row should capture, where available:
 Build fresh 50-row evidence pools without reusing commercially weak Home Organisation rows merely to satisfy counts.
 
 Priority sequence:
-- [ ] Home & Garden — 50
-- [ ] Kitchen & Dining — 50
+- [x] Home & Garden — 50 exact demand-screen rows recorded in issue #41.
+- [x] Kitchen & Dining — 50 exact demand-screen rows recorded in issue #42.
 - [ ] Home Decor — 50
 - [ ] Bedding & Bath — 50
 - [ ] Furniture — 50
@@ -143,28 +144,51 @@ Prefer non-ingestible, low-compliance, lightweight, trusted supplier paths first
 - [ ] Close authorised-reseller / wholesale path for branded products; otherwise reject branded family.
 - [ ] Revalidate Artiss/NewDeals exact account economics and fulfilment identity.
 
+## Executed this cycle
+
+1. Fresh-scanned repository root and `.overseer` adoption pointer.
+2. Created this canonical batch file at `.overseer/batches/VERTICAL-EXECUTION-BATCH.md`.
+3. Reconciled live Shopify master-category model to issue #40.
+4. Built and durably logged **Home & Garden 50-row exact demand-screen pool** in issue #41.
+5. Built and durably logged **Kitchen & Dining 50-row exact demand-screen pool** in issue #42.
+6. Preserved hard commercial boundaries: market demand evidence is not sourcing permission; retail price is not wholesale cost; no row was promoted to launch-ready without landed economics.
+7. Identified lower-risk next-pass cohorts in both new pools for supplier/economics closure.
+
+## Verification snapshot
+
+Evidence-backed 50-row pools now durably exist for:
+
+- Boho / Women's fashion — #36
+- Baby / Pet / Safety — #38
+- Tech & Everyday Gear — #39
+- Home & Garden — #41
+- Kitchen & Dining — #42
+
+This equals **250 exact research/demand-screen rows across five major pools**, before overlap/reuse and before claiming owned-site qualification.
+
+No production Shopify mutation, publication, supplier contact, purchase, paid app, credential change, marketplace listing, merge or deployment occurred in this cycle.
+
 ## Acceptance for this batch cycle
 
-This batch cycle is successful if it:
+- [x] canonical batch file created/reconciled;
+- [x] multiple category evidence pools materially increased;
+- [x] weak/high-risk products were held/rejected instead of lowering criteria;
+- [x] supplier/economics blockers recorded;
+- [x] production state left unchanged;
+- [x] next highest-value tasks replenished.
 
-1. creates/reconciles the canonical batch file;
-2. materially increases one or more category evidence pools;
-3. rejects or holds weak products rather than diluting criteria;
-4. records exact blockers and supplier-economics gaps;
-5. leaves production state unchanged;
-6. replenishes the next highest-value tasks.
+## Replenished priority queue
 
-## Current priority queue
-
-P0. Home & Garden 50-row fresh pool.  
-P1. Kitchen & Dining 50-row fresh pool.  
-P2. Women's Clothing/Boho supplier-economics closure.  
-P3. Baby/Pet/Safety lower-risk supplier-economics closure.  
-P4. Home Decor + Bedding & Bath 50-row pools.  
-P5. Accessories + Men's Clothing + Footwear.  
-P6. Beauty categories.  
-P7. Furniture + Garden & Outdoor.  
-P8. Supplements only under higher compliance gate.
+P0. **Home Decor — 50 exact demand-screen products.**  
+P1. **Bedding & Bath — 50 exact demand-screen products.**  
+P2. **Women's Clothing / Boho supplier-economics closure** for strongest 10.  
+P3. **Baby/Pet/Safety lower-risk supplier-economics closure.**  
+P4. **Furniture — 50** and **Garden & Outdoor — 50**.  
+P5. **Accessories — 50**, then Men's Clothing and Footwear.  
+P6. **Health & Beauty / Skin Care / Hair Care / Personal Care / Makeup — 50 each.**  
+P7. **Kids & Baby — 50** beyond overlap with combined Baby/Pet/Safety site.  
+P8. **Tech master collection decision + qualification closure.**  
+P9. **Supplements** only under the higher compliance/claims gate.
 
 ## Durable reporting
 
